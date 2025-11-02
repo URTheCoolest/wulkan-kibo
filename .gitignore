@@ -1,0 +1,58 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor and IDE Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Node modules (if you add any build tools later)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+# Build Output (if you add a build step later)
+dist/
+build/
+out/
+.vercel/
+.netlify/
+
+# Logs
+*.log
+logs/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# Backup Files
+*.bak
+*.backup
+
+# Large Media Files (add your own as needed)
+# *.mp4
+# *.mov
+# *.avi
+
+# Package Manager Lock Files (optional, some prefer to commit these)
+# package-lock.json
+# yarn.lock

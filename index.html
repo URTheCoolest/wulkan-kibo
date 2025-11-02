@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn to cook authentic African dishes with Wulkan Kibo - video tutorials, detailed recipes, and step-by-step instructions for delicious African cuisine.">
+    <script>
+      // Prevent flash of unstyled content by setting dark mode immediately
+      (function() {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      })();
+    </script>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wulkan-kibo.vercel.app/">
+    <meta property="og:title" content="Wulkan Kibo - Learn African Cooking">
+    <meta property="og:description" content="Master authentic African recipes with video tutorials and detailed instructions.">
+    <meta property="og:image" content="https://wulkan-kibo.vercel.app/assets/images/hero.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wulkan-kibo.vercel.app/">
+    <meta property="twitter:title" content="Wulkan Kibo - Learn African Cooking">
+    <meta property="twitter:description" content="Master authentic African recipes with video tutorials and detailed instructions.">
+    <meta property="twitter:image" content="https://wulkan-kibo.vercel.app/assets/images/hero.jpg">
+    
+    <link rel="canonical" href="https://wulkan-kibo.vercel.app/">
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <title>Wulkan Kibo - Learn African Cooking with Video Recipes</title>
+</head>
+<body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+    
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="/" class="logo">🌋 Wulkan Kibo</a>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/recipes/">Recipes</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 12a1 1 0 001 1h2a1 1 0 000-2H3a1 1 0 00-1 1zm17 0a1 1 0 001 1h2a1 1 0 000-2h-2a1 1 0 00-1 1zm-8-7a1 1 0 011-1V3a1 1 0 00-2 0v2a1 1 0 011 1zM12 19a1 1 0 01-1 1v2a1 1 0 002 0v-2a1 1 0 01-1-1zM5.99 7.401a1 1 0 001.414-1.414L5.697 4.28A1 1 0 004.283 5.697l1.707 1.704zm12.02 9.197a1 1 0 00-1.414 1.414l1.707 1.707a1 1 0 001.414-1.414l-1.707-1.707zM4.283 18.303a1 1 0 001.414 1.414l1.707-1.707a1 1 0 00-1.414-1.414l-1.707 1.707zm13.434-13.02a1 1 0 001.414-1.414L17.424 2.16a1 1 0 00-1.414 1.414l1.707 1.707z"/></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="/assets/images/hero.jpg" alt="Colorful array of African dishes including jollof rice, stews, and grilled meats" class="hero-image" loading="lazy">
+        <div class="hero-content container">
+            <h1 class="hero-title">Discover the Rich Flavors of Africa</h1>
+            <p class="hero-subtitle">Learn authentic African recipes with step-by-step video tutorials</p>
+            <a href="/recipes/" class="btn btn-primary">Explore Recipes</a>
+            <button class="btn btn-secondary" data-video="dQw4w9WgXcQ">Watch Introduction</button>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main">
+        <div class="container">
+            <!-- Search Section -->
+            <section class="search-section">
+                <h2 class="section-title">Find Your Next Meal</h2>
+                <div class="search-wrapper">
+                    <input 
+                        type="search" 
+                        id="home-search" 
+                        class="search-input" 
+                        placeholder="Search recipes by name, ingredient, or tag..."
+                        aria-label="Search recipes">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </section>
+            
+            <!-- Featured Recipes -->
+            <section class="featured-section">
+                <h2 class="section-title">Featured Recipes</h2>
+                <div class="grid recipe-grid" id="featured-recipes">
+                    
+                    <!-- Recipe Card 1: Jollof Rice -->
+                    <article class="recipe-card" data-tags="rice,one-pot,main-course" data-title="African Jollof Rice" data-ingredients="rice,tomatoes,onions,peppers">
+                        <a href="/recipes/african-jollof.html" class="recipe-card-link">
+                            <img src="/assets/images/jollof-thumb.png" alt="Steaming plate of orange-red jollof rice garnished with vegetables" class="recipe-image" loading="lazy">
+                            <div class="recipe-card-content">
+                                <h3 class="recipe-title">African Jollof Rice</h3>
+                                <p class="recipe-description">A beloved West African one-pot dish with perfectly seasoned rice in rich tomato sauce.</p>
+                                <div class="recipe-meta">
+                                    <span class="meta-item">⏱️ 45 min</span>
+                                    <span class="meta-item">👨‍🍳 Medium</span>
+                                    <span class="meta-item">🍽️ 6 servings</span>
+                                </div>
+                                <div class="recipe-tags">
+                                    <span class="tag">rice</span>
+                                    <span class="tag">one-pot</span>
+                                    <span class="tag">main-course</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- Recipe Card 2: Peanut Stew -->
+                    <article class="recipe-card" data-tags="stew,vegetarian,comfort-food" data-title="West African Peanut Stew" data-ingredients="peanuts,sweet-potato,tomatoes,spinach">
+                        <a href="/recipes/peanut-stew.html" class="recipe-card-link">
+                            <img src="/assets/images/peanut-thumb.png" alt="Bowl of creamy orange peanut stew with chunks of sweet potato and greens" class="recipe-image" loading="lazy">
+                            <div class="recipe-card-content">
+                                <h3 class="recipe-title">West African Peanut Stew</h3>
+                                <p class="recipe-description">Creamy, hearty vegetarian stew with sweet potatoes, spinach, and rich peanut flavor.</p>
+                                <div class="recipe-meta">
+                                    <span class="meta-item">⏱️ 35 min</span>
+                                    <span class="meta-item">👨‍🍳 Easy</span>
+                                    <span class="meta-item">🍽️ 4 servings</span>
+                                </div>
+                                <div class="recipe-tags">
+                                    <span class="tag">stew</span>
+                                    <span class="tag">vegetarian</span>
+                                    <span class="tag">comfort-food</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                    <!-- Recipe Card 3: Plantain Fritters -->
+                    <article class="recipe-card" data-tags="snack,vegetarian,fried" data-title="Plantain Fritters (Kelewele)" data-ingredients="plantain,ginger,cayenne,onion">
+                        <a href="/recipes/plantain-fritters.html" class="recipe-card-link">
+                            <img src="/assets/images/plantain-thumb.png" alt="Golden brown fried plantain pieces with visible spices on a white plate" class="recipe-image" loading="lazy">
+                            <div class="recipe-card-content">
+                                <h3 class="recipe-title">Plantain Fritters (Kelewele)</h3>
+                                <p class="recipe-description">Spicy, sweet fried plantain bites - a popular Ghanaian street food snack.</p>
+                                <div class="recipe-meta">
+                                    <span class="meta-item">⏱️ 20 min</span>
+                                    <span class="meta-item">👨‍🍳 Easy</span>
+                                    <span class="meta-item">🍽️ 4 servings</span>
+                                </div>
+                                <div class="recipe-tags">
+                                    <span class="tag">snack</span>
+                                    <span class="tag">vegetarian</span>
+                                    <span class="tag">fried</span>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                    
+                </div>
+                
+                <div class="cta-section">
+                    <a href="/recipes/" class="btn btn-primary">View All Recipes</a>
+                </div>
+            </section>
+            
+            <!-- Call to Action -->
+            <section class="cta-banner">
+                <h2>Ready to Start Cooking?</h2>
+                <p>Join thousands learning authentic African cuisine</p>
+                <a href="/recipes/" class="btn btn-primary">Get Started</a>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Wulkan Kibo</h3>
+                    <p>Bringing African flavors to your kitchen</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/recipes/">Recipes</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Share your creations with #WulkanKibo</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wulkan Kibo. Licensed under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Video Modal -->
+    <div class="modal" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close video modal">&times;</button>
+            <h2 id="modal-title" class="sr-only">Video Player</h2>
+            <div class="video-wrapper" id="video-container">
+                <!-- Video will be inserted here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
