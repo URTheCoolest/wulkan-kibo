@@ -42,7 +42,7 @@ This repository contains a small static website for "Wulkan Kibo" — a collecti
 	- **`favicon.svg`**: Scalable favicon used in pages. An optional `favicon.png` is referenced in some pages (check presence).
 - **`assets/images/`**
 	- Various recipe thumbnails and hero images such as `jollof-thumb.png`, `jollof-thumb-2.png`, `peanut-thumb.png`, `peanut-thumb-2.png`, `plantain-thumb.png` and others.
-	- **`assets/images/team/`**: Team member photos referenced on the About page (`jarod.jpg`, `josiah.jpg`, `iga.jpg`, etc.).
+	- **`assets/images/team/`**: Team member photos referenced on the About page (`jarod.png`, `josiah.png`, `iga.png`, etc.).
 
 **Public Directory (`public/`)**
 
@@ -108,17 +108,17 @@ wulkan-kibo/
 │  │  ├─ volcano.svg
 │  │  └─ README.md
 │  ├─ images/
-│  │  ├─ hero.jpg
+│  │  ├─ hero.png
 │  │  ├─ jollof-thumb.png
 │  │  ├─ jollof-thumb-2.png
 │  │  ├─ peanut-thumb.png
 │  │  ├─ peanut-thumb-2.png
 │  │  ├─ plantain-thumb.png
 │  │  └─ team/
-│  │     ├─ iga.jpg
-│  │     ├─ ignacy.jpg
-│  │     ├─ nina.jpg
-│  │     └─ roman.jpg
+│  │     ├─ iga.png
+│  │     ├─ ignacy.png
+│  │     ├─ nina.png
+│  │     └─ roman.png
 │  └─ js/
 │     └─ main.js
 └─ recipes/
