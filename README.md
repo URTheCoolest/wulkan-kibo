@@ -91,42 +91,36 @@ Tell me which of the next steps you'd like me to run and I'll proceed.
 **Repository File Tree**
 
 ```
-aj247-site/
-├─ .gitignore
-├─ .gitattributes
+wulkan-kibo/
+├─ about.html
+├─ contact.html
+├─ index.html
 ├─ LICENSE
 ├─ README.md
 ├─ robots.txt
 ├─ sitemap.xml
 ├─ vercel.json
-├─ index.html
-├─ about.html
-├─ contact.html
-├─ manifest.json  (referenced in `index.html` — not present in repo)
 ├─ assets/
 │  ├─ css/
 │  │  └─ styles.css
-│  ├─ js/
-│  │  └─ main.js
 │  ├─ icons/
-│  │  └─ favicon.svg
-│  └─ images/
-│     ├─ jollof-thumb.png
-│     ├─ jollof-thumb-2.png
-│     ├─ peanut-thumb.png
-│     ├─ peanut-thumb-2.png
-│     ├─ plantain-thumb.png
-│     └─ team/
-│        ├─ jarod.jpg
-│        ├─ josiah.jpg
-│        ├─ iga.jpg
-│        ├─ nina.jpg
-│        ├─ roman.jpg
-│        └─ ignacy.jpg
-├─ public/
-│  └─ assets/  (parallel copy used by Vercel config)
-│     └─ css/
-│        └─ styles.css
+│  │  ├─ favicon.svg
+│  │  ├─ volcano.svg
+│  │  └─ README.md
+│  ├─ images/
+│  │  ├─ hero.jpg
+│  │  ├─ jollof-thumb.png
+│  │  ├─ jollof-thumb-2.png
+│  │  ├─ peanut-thumb.png
+│  │  ├─ peanut-thumb-2.png
+│  │  ├─ plantain-thumb.png
+│  │  └─ team/
+│  │     ├─ iga.jpg
+│  │     ├─ ignacy.jpg
+│  │     ├─ nina.jpg
+│  │     └─ roman.jpg
+│  └─ js/
+│     └─ main.js
 └─ recipes/
 	├─ index.html
 	├─ african-jollof.html
