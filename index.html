@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    // Set default consent to denied
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+  </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-20L5TV2NMP"></script>
     <script>
@@ -243,5 +255,64 @@
     </div>
     
     <script src="assets/js/main.js"></script>
+
+    <!-- Consent Banner -->
+    <div id="cookie-consent-banner" style="
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       background: white;
+       padding: 16px;
+       box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+       z-index: 9999;
+       display: flex;
+       gap: 12px;
+       align-items: center;
+       justify-content: space-between;
+       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    ">
+      <p style="margin: 0; color: #0f172a;">Ta witryna używa plików cookie do analityki. Czy wyrażasz zgodę?</p>
+      <div>
+        <button id="consent-accept" style="margin-right: 8px; padding: 8px 12px; background:#0f172a; color:#fff; border:none; border-radius:6px; cursor:pointer;">Tak, zgadzam się</button>
+        <button id="consent-reject" style="padding: 8px 12px; background:#e5e7eb; color:#0f172a; border:none; border-radius:6px; cursor:pointer;">Nie, dzięki</button>
+      </div>
+    </div>
+
+    <script>
+      const consentKey = 'wulkan_kibo_consent';
+      const banner = document.getElementById('cookie-consent-banner');
+
+      // If consent already given/denied, hide banner and restore state
+      const stored = localStorage.getItem(consentKey);
+      if (stored) {
+        banner.style.display = 'none';
+        if (stored === 'granted') {
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted',
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+          });
+        }
+      }
+
+      document.getElementById('consent-accept').onclick = () => {
+        localStorage.setItem(consentKey, 'granted');
+        banner.style.display = 'none';
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted',
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        });
+      };
+
+      document.getElementById('consent-reject').onclick = () => {
+        localStorage.setItem(consentKey, 'denied');
+        banner.style.display = 'none';
+        // consent remains denied by default
+      };
+    </script>
 </body>
 </html>
