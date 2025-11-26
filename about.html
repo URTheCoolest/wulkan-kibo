@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+
+            // Set default consent to denied
+            gtag('consent', 'default', {
+              'analytics_storage': 'denied',
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied'
+            });
+        </script>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-20L5TV2NMP"></script>
         <script>
@@ -40,6 +52,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Cookie Consent -->
+    <script src="assets/js/cookie-consent.js"></script>
     
     <style>
         /* Simple Team Section Styles */
