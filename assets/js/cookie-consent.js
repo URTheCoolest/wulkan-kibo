@@ -14,17 +14,24 @@
    * Initialize the cookie consent system
    */
   function initCookieConsent() {
+    console.log('🍪 Cookie consent: Initializing...');
+    
     // Check if consent has already been given/denied
     const storedConsent = localStorage.getItem(CONSENT_KEY);
     const storedVersion = localStorage.getItem(CONSENT_VERSION_KEY);
 
+    console.log('🍪 Cookie consent: Stored consent =', storedConsent);
+    console.log('🍪 Cookie consent: Stored version =', storedVersion);
+
     // If consent exists and is current version, apply it and don't show modal
     if (storedConsent && storedVersion === CONSENT_VERSION) {
+      console.log('🍪 Cookie consent: Valid consent found, applying and hiding modal');
       applyConsent(storedConsent);
       return;
     }
 
     // Otherwise, show the consent modal
+    console.log('🍪 Cookie consent: No valid consent found, showing modal');
     createConsentModal();
   }
 
@@ -32,6 +39,16 @@
    * Create and display the cookie consent modal
    */
   function createConsentModal() {
+    console.log('🍪 Cookie consent: Creating modal...');
+    
+    // Ensure body exists before trying to append
+    if (!document.body) {
+      console.error('🍪 Cookie consent: document.body not available yet');
+      return;
+    }
+
+    console.log('🍪 Cookie consent: Body exists, creating overlay');
+
     // Create the overlay
     const overlay = document.createElement('div');
     overlay.className = 'cookie-consent-overlay';
@@ -61,16 +78,19 @@
 
     // Add to page
     document.body.appendChild(overlay);
+    console.log('🍪 Cookie consent: Modal added to page');
 
     // Prevent body scroll when modal is open
     document.body.style.overflow = 'hidden';
 
     // Set up event listeners
     document.getElementById('cookie-accept-btn').addEventListener('click', () => {
+      console.log('🍪 Cookie consent: Accept button clicked');
       handleConsent('granted', overlay);
     });
 
     document.getElementById('cookie-reject-btn').addEventListener('click', () => {
+      console.log('🍪 Cookie consent: Reject button clicked');
       handleConsent('denied', overlay);
     });
   }
@@ -81,9 +101,13 @@
    * @param {HTMLElement} overlay - The overlay element to remove
    */
   function handleConsent(choice, overlay) {
+    console.log('🍪 Cookie consent: Saving consent as:', choice);
+    
     // Save consent to localStorage
     localStorage.setItem(CONSENT_KEY, choice);
     localStorage.setItem(CONSENT_VERSION_KEY, CONSENT_VERSION);
+
+    console.log('🍪 Cookie consent: Saved to localStorage');
 
     // Apply consent settings
     applyConsent(choice);
@@ -95,6 +119,7 @@
     setTimeout(() => {
       overlay.remove();
       document.body.style.overflow = '';
+      console.log('🍪 Cookie consent: Modal removed');
     }, 300);
   }
 
@@ -116,11 +141,12 @@
     }
   }
 
-  // Initialize when DOM is ready
+  // Initialize when DOM is ready - wait for DOMContentLoaded to ensure body exists
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initCookieConsent);
-  } else {
-    initCookieConsent();
+  } else if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    // DOM is already loaded, but use setTimeout to ensure body is available
+    setTimeout(initCookieConsent, 0);
   }
 
   // Expose a method to reset consent (useful for testing or privacy settings)
