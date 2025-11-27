@@ -360,6 +360,13 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
+      // If the form has a real action (e.g., FormSubmit), allow native submit
+      const action = contactForm.getAttribute('action') || '';
+      if (action && /formsubmit\.co/i.test(action)) {
+        return; // let the browser submit the form normally
+      }
+      
+      // Otherwise, prevent default and use demo/client-side behavior
       e.preventDefault();
       
       const formData = new FormData(contactForm);

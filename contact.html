@@ -108,8 +108,13 @@
                         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form" id="contact-form">
                         -->
                         
-                        <!-- Option 2: Demo form with client-side handling -->
-                        <form class="contact-form" id="contact-form">
+                        <!-- Option: FormSubmit integration -->
+                        <form class="contact-form" id="contact-form" action="https://formsubmit.co/d896737d6c93a5650956042043819e58" method="POST">
+                            <!-- FormSubmit options -->
+                            <input type="hidden" name="_subject" value="Nowa wiadomość z Wulkan Kibo">
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="thank-you.html">
                             <div class="form-group">
                                 <label for="name">Imię <span class="required">*</span></label>
                                 <input 
@@ -161,10 +166,7 @@
                         <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
                         
                         <p class="form-note">
-                            <strong>Uwaga:</strong> To jest formularz demonstracyjny. Aby włączyć wysyłanie:
-                            <br>• Zarejestruj się na <a href="https://formspree.io" target="_blank" rel="noopener">Formspree.io</a> (bezpłatnie)
-                            <br>• Lub zaimplementuj funkcję serverless w <code>/api/contact</code>
-                            <br>• Zobacz instrukcje w komentarzach kodu
+                            Po wysłaniu po raz pierwszy FormSubmit wyśle wiadomość z prośbą o potwierdzenie adresu e‑mail. Po potwierdzeniu kolejne zgłoszenia trafią bezpośrednio do skrzynki odbiorczej.
                         </p>
                     </section>
                     
@@ -177,7 +179,7 @@
                                 <span class="contact-icon">📧</span>
                                 <div>
                                     <h3>Email</h3>
-                                    <a href="mailto:hello@wulkan-kibo.com">hello@wulkan-kibo.com</a>
+                                    <a href="mailto:wulkan.kibo@gmail.com">wulkan.kibo@gmail.com</a>
                                 </div>
                             </div>
                             
@@ -185,7 +187,7 @@
                                 <span class="contact-icon">💬</span>
                                 <div>
                                     <h3>Media Społecznościowe</h3>
-                                    <p>Śledź nas i dziel się swoimi kreacjami z <strong>#WulkanKibo</strong></p>
+                                    <p>Śledź nas i dziel się swoimi kreacjami z <strong>@WulkanKibo</strong></p>
                                 </div>
                             </div>
                             
