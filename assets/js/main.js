@@ -359,62 +359,62 @@ document.addEventListener('DOMContentLoaded', function() {
   const formStatus = document.getElementById('form-status');
   
   if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
-      // If the form has a real action (e.g., FormSubmit), allow native submit
-      const action = contactForm.getAttribute('action') || '';
-      if (action && /formsubmit\.co/i.test(action)) {
-        return; // let the browser submit the form normally
-      }
+    // Check if form is using FormSubmit - if so, skip client-side handling
+    const action = contactForm.getAttribute('action') || '';
+    const isUsingFormSubmit = action && /formsubmit\.co/i.test(action);
+    
+    if (!isUsingFormSubmit) {
+      contactForm.addEventListener('submit', async function(e) {
+        // Use demo/client-side behavior
+        e.preventDefault();
       
-      // Otherwise, prevent default and use demo/client-side behavior
-      e.preventDefault();
-      
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
-      
-      // Show loading state
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Sending...';
-      submitBtn.disabled = true;
-      
-      // Simulate form submission (replace with actual endpoint)
-      // Option 1: Use Formspree - uncomment the action attribute in HTML
-      // Option 2: Use serverless function - implement /api/contact
-      
-      // Demo: Simulate success after 1 second
-      setTimeout(() => {
-        showFormStatus('success', 'Thank you! Your message has been sent. (This is a demo - configure form submission in the code)');
-        contactForm.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }, 1000);
-      
-      // For real implementation with Formspree, use:
-      /*
-      try {
-        const response = await fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
         
-        if (response.ok) {
-          showFormStatus('success', 'Thank you! Your message has been sent.');
+        // Show loading state
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission (replace with actual endpoint)
+        // Option 1: Use Formspree - uncomment the action attribute in HTML
+        // Option 2: Use serverless function - implement /api/contact
+        
+        // Demo: Simulate success after 1 second
+        setTimeout(() => {
+          showFormStatus('success', 'Thank you! Your message has been sent. (This is a demo - configure form submission in the code)');
           contactForm.reset();
-        } else {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }, 1000);
+        
+        // For real implementation with Formspree, use:
+        /*
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+          
+          if (response.ok) {
+            showFormStatus('success', 'Thank you! Your message has been sent.');
+            contactForm.reset();
+          } else {
+            showFormStatus('error', 'Oops! There was a problem sending your message.');
+          }
+        } catch (error) {
           showFormStatus('error', 'Oops! There was a problem sending your message.');
+        } finally {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
         }
-      } catch (error) {
-        showFormStatus('error', 'Oops! There was a problem sending your message.');
-      } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      }
-      */
-    });
+        */
+      });
+    }
   }
   
   function showFormStatus(type, message) {
