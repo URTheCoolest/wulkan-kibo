@@ -591,3 +591,10 @@ function generateSitemap() {
 
 // Expose for console access during development
 window.generateSitemap = generateSitemap;
+
+// ========================================
+// Vercel Speed Insights
+// ========================================
+import { injectSpeedInsights } from "https://cdn.jsdelivr.net/npm/@vercel/speed-insights@latest/dist/speed-insights.mjs";
+
+injectSpeedInsights();
