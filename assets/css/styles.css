@@ -651,11 +651,11 @@ a:hover {
 }
 
 /* Light mode specific styles */
-:root:not([data-theme="dark"]) .recipe-card {
+[data-theme="light"] .recipe-card {
   background-color: #ffffff;
 }
 
-:root:not([data-theme="dark"]) .recipe-card:hover {
+[data-theme="light"] .recipe-card:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -1378,7 +1378,7 @@ a:hover {
 }
 
 /* Light mode footer */
-:root:not([data-theme="dark"]) .footer {
+[data-theme="light"] .footer {
   background-color: #f3f4f6;
 }
 

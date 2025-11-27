@@ -11,21 +11,38 @@ document.addEventListener('DOMContentLoaded', function() {
   // ========================================
   const themeToggle = document.querySelector('.theme-toggle');
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-  
+
   // Function to set the theme
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
   }
-  
-  // Initialize theme (dark mode by default)
+
+  // Initialize theme: use saved, else system preference
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
+  if (savedTheme === 'light' || savedTheme === 'dark') {
     setTheme(savedTheme);
   } else {
-    setTheme('dark');
+    const systemTheme = prefersDarkScheme.matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', systemTheme);
   }
-  
+
+  // Keep in sync with system if user hasn't chosen explicitly
+  if (!savedTheme) {
+    try {
+      prefersDarkScheme.addEventListener('change', (e) => {
+        const newTheme = e.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+      });
+    } catch (_) {
+      // Fallback for older browsers
+      prefersDarkScheme.addListener && prefersDarkScheme.addListener((e) => {
+        const newTheme = e.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+      });
+    }
+  }
+
   // Theme toggle click handler
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
@@ -595,6 +612,13 @@ window.generateSitemap = generateSitemap;
 // ========================================
 // Vercel Speed Insights
 // ========================================
-import { injectSpeedInsights } from "https://cdn.jsdelivr.net/npm/@vercel/speed-insights@latest/dist/speed-insights.mjs";
-
-injectSpeedInsights();
+// Load Vercel Speed Insights safely (don't break the app if it fails)
+try {
+  import('https://cdn.jsdelivr.net/npm/@vercel/speed-insights@latest/dist/speed-insights.mjs')
+    .then(({ injectSpeedInsights }) => {
+      try { injectSpeedInsights(); } catch (_) { /* noop */ }
+    })
+    .catch(() => { /* noop */ });
+} catch (_) {
+  // Dynamic import not supported; skip insights
+}
