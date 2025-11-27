@@ -388,31 +388,6 @@ document.addEventListener('DOMContentLoaded', function() {
           submitBtn.textContent = originalText;
           submitBtn.disabled = false;
         }, 1000);
-        
-        // For real implementation with Formspree, use:
-        /*
-        try {
-          const response = await fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-              'Accept': 'application/json'
-            }
-          });
-          
-          if (response.ok) {
-            showFormStatus('success', 'Thank you! Your message has been sent.');
-            contactForm.reset();
-          } else {
-            showFormStatus('error', 'Oops! There was a problem sending your message.');
-          }
-        } catch (error) {
-          showFormStatus('error', 'Oops! There was a problem sending your message.');
-        } finally {
-          submitBtn.textContent = originalText;
-          submitBtn.disabled = false;
-        }
-        */
       });
     }
   }
