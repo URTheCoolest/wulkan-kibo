@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stylized detailed volcano SVG favicon (512x512) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Volcano icon">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#14213d"/>
+      <stop offset="60%" stop-color="#0f1724"/>
+      <stop offset="100%" stop-color="#08121a"/>
+    </linearGradient>
+    <linearGradient id="lavaGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffd166"/>
+      <stop offset="50%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#d7263d"/>
+    </linearGradient>
+    <linearGradient id="rockGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#3b3f44"/>
+      <stop offset="100%" stop-color="#22262a"/>
+    </linearGradient>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="smokeBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="turb"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" in2="turb" mode="overlay"/>
+    </filter>
+  </defs>
+
+  <!-- Background sky -->
+  <rect width="100%" height="100%" fill="url(#skyGrad)"/>
+
+  <!-- Distant mountain silhouette -->
+  <path d="M12 380 C90 250 180 220 260 300 C320 360 380 320 500 380 L500 520 L12 520 Z"
+        fill="#07121a" opacity="0.9"/>
+
+  <!-- Volcano main body -->
+  <g transform="translate(40,20)" filter="url(#softShadow)">
+    <path d="M120 360 C170 250 230 180 270 140 C310 180 370 250 420 360 L420 420 L120 420 Z"
+          fill="url(#rockGrad)" stroke="#000" stroke-opacity="0.45" stroke-width="2"/>
+
+    <!-- layered faces/strata -->
+    <path d="M140 360 C170 280 210 230 255 200" fill="none" stroke="#2e3136" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+    <path d="M180 370 C210 300 250 250 295 220" fill="none" stroke="#232528" stroke-width="6" stroke-linecap="round" opacity="0.35"/>
+
+    <!-- Crater rim highlight -->
+    <path d="M255 140 C252 145 248 148 244 152 C240 156 236 160 230 162"
+          fill="none" stroke="#ffedd5" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- Lava flow inside crater -->
+    <path d="M260 150 C250 170 240 190 230 214 C220 238 210 260 200 290 C190 320 180 350 170 370 L305 370 C295 340 285 310 272 278 C260 246 265 210 265 210 C268 190 270 170 260 150 Z"
+          fill="url(#lavaGrad)" stroke="#b81d2a" stroke-width="1"/>
+
+    <!-- Lava highlights / sheen -->
+    <path d="M230 220 C238 206 246 198 260 190" fill="none" stroke="#fff7d6" stroke-width="4" stroke-linecap="round" opacity="0.35"/>
+
+    <!-- Ember particles -->
+    <g opacity="0.9">
+      <circle cx="255" cy="180" r="3" fill="#ffd166"/>
+      <circle cx="242" cy="200" r="2.3" fill="#ffb86b"/>
+      <circle cx="270" cy="170" r="2" fill="#ff6b35"/>
+      <circle cx="248" cy="230" r="1.5" fill="#ffd166"/>
+    </g>
+
+  </g>
+
+  <!-- Smoke plumes -->
+  <g fill="#dfe6ee" opacity="0.65" transform="translate(-10,-10)" filter="url(#smokeBlur)">
+    <path d="M270 80 C260 60 245 50 220 62 C200 72 190 92 190 110 C180 120 170 138 180 150 C190 165 210 170 225 160 C240 150 260 140 280 142 C300 144 320 160 325 180 C330 200 320 220 300 230 C310 210 310 190 300 170 C290 150 280 120 270 100 Z"
+          transform="translate(-10,0) scale(0.65)"/>
+    <path d="M290 60 C285 40 270 30 250 40 C230 52 220 80 235 96 C250 112 270 110 288 100 C306 90 305 78 300 68 Z"
+          transform="translate(0,-6) scale(0.5)"/>
+  </g>
+
+  <!-- Foreground lava trickle and gloss -->
+  <g transform="translate(40,20)">
+    <path d="M170 370 C190 354 210 340 235 330 C245 326 255 324 270 326"
+          fill="none" stroke="url(#lavaGrad)" stroke-width="8" stroke-linecap="round" opacity="0.95"/>
+    <path d="M210 380 C220 370 235 360 255 358"
+          fill="none" stroke="#fff5d8" stroke-width="3" stroke-linecap="round" opacity="0.25"/>
+  </g>
+
+  <!-- Small decorative ground -->
+  <ellipse cx="260" cy="444" rx="170" ry="28" fill="#06080a" opacity="0.7"/>
+
+  <!-- Optional subtle grain for texture -->
+  <rect width="100%" height="100%" fill="none" filter="url(#grain)" opacity="0.06"/>
+
+</svg>
