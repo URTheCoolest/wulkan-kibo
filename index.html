@@ -95,11 +95,17 @@
                     <span class="hamburger"></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="active">Strona główna</a></li>
-                    <li><a href="recipes/index.html">Przepisy</a></li>
-                    <li><a href="about.html">O nas</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="index.html" class="active" data-i18n="site.nav.home">Strona główna</a></li>
+                    <li><a href="recipes/index.html" data-i18n="site.nav.recipes">Przepisy</a></li>
+                    <li><a href="about.html" data-i18n="site.nav.about">O nas</a></li>
+                    <li><a href="contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
                 </ul>
+                <label for="lang-select" class="sr-only" data-i18n="site.lang.label">Język</label>
+                <select id="lang-select" aria-label="Wybierz język">
+                  <option value="pl" data-i18n="site.lang.pl">Polski</option>
+                  <option value="en" data-i18n="site.lang.en">Angielski</option>
+                  <option value="fr" data-i18n="site.lang.fr">Francuski</option>
+                </select>
                 <button class="theme-toggle" aria-label="Przełącz tryb ciemny">
                     <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 12a1 1 0 001 1h2a1 1 0 000-2H3a1 1 0 00-1 1zm17 0a1 1 0 001 1h2a1 1 0 000-2h-2a1 1 0 00-1 1zm-8-7a1 1 0 011-1V3a1 1 0 00-2 0v2a1 1 0 011 1zM12 19a1 1 0 01-1 1v2a1 1 0 002 0v-2a1 1 0 01-1-1zM5.99 7.401a1 1 0 001.414-1.414L5.697 4.28A1 1 0 004.283 5.697l1.707 1.704zm12.02 9.197a1 1 0 00-1.414 1.414l1.707 1.707a1 1 0 001.414-1.414l-1.707-1.707zM4.283 18.303a1 1 0 001.414 1.414l1.707-1.707a1 1 0 00-1.414-1.414l-1.707 1.707zm13.434-13.02a1 1 0 001.414-1.414L17.424 2.16a1 1 0 00-1.414 1.414l1.707 1.707z"/></svg>
@@ -112,10 +118,10 @@
     <section class="hero">
         <img src="assets/images/jollof-thumb-1024x1024.webp" alt="Colorful array of African dishes including jollof rice, stews, and grilled meats" class="hero-image" loading="lazy">
         <div class="hero-content container">
-            <h1 class="hero-title">Odkryj Bogate Smaki Afryki</h1>
-            <p class="hero-subtitle">Naucz się autentycznych afrykańskich przepisów dzięki samouczkom wideo krok po kroku</p>
-            <a href="recipes/index.html" class="btn btn-primary">Przeglądaj Przepisy</a>
-            <button class="btn btn-secondary" data-video="dQw4w9WgXcQ">Obejrzyj Wprowadzenie</button>
+            <h1 class="hero-title" data-i18n="home.heroTitle">Odkryj Bogate Smaki Afryki</h1>
+            <p class="hero-subtitle" data-i18n="home.heroSubtitle">Naucz się autentycznych afrykańskich przepisów dzięki samouczkom wideo krok po kroku</p>
+            <a href="recipes/index.html" class="btn btn-primary" data-i18n="home.heroButton1">Przeglądaj Przepisy</a>
+            <button class="btn btn-secondary" data-video="dQw4w9WgXcQ" data-i18n="home.heroButton2">Obejrzyj Wprowadzenie</button>
         </div>
     </section>
     
@@ -124,12 +130,14 @@
         <div class="container">
             <!-- Search Section -->
             <section class="search-section">
-                <h2 class="section-title">Znajdź Swój Następny Posiłek</h2>
+                <h2 class="section-title" data-i18n="home.searchTitle">Znajdź Swój Następny Posiłek</h2>
                 <div class="search-wrapper">
                     <input 
                         type="search" 
                         id="home-search" 
                         class="search-input" 
+                        data-i18n-attr="placeholder"
+                        data-i18n="home.searchPlaceholder"
                         placeholder="Szukaj przepisów według nazwy, składnika lub tagu..."
                         aria-label="Szukaj przepisów">
                     <span class="search-icon">🔍</span>
@@ -138,7 +146,7 @@
             
             <!-- Featured Recipes -->
             <section class="featured-section">
-                <h2 class="section-title">Wyróżnione Przepisy</h2>
+                <h2 class="section-title" data-i18n="home.featuredTitle">Wyróżnione Przepisy</h2>
                 <div class="grid recipe-grid" id="featured-recipes">
                     
                     <!-- Recipe Card 1: Jollof Rice -->
@@ -146,17 +154,17 @@
                         <a href="recipes/african-jollof.html" class="recipe-card-link">
                             <img src="assets/images/jollof-thumb-1024x1024.webp" alt="Dymiacy talerz pomarańczowo-czerwonego ryżu jollof przybranego warzywami" class="recipe-image" loading="lazy">
                             <div class="recipe-card-content">
-                                <h3 class="recipe-title">Afrykański Ryż Jollof</h3>
-                                <p class="recipe-description">Ukochane zachodnioafrykańskie danie jednogarnkowe z idealnie przyprawionym ryżem w bogatym sosie pomidorowym.</p>
+                                <h3 class="recipe-title" data-i18n="home.jollofTitle">Afrykański Ryż Jollof</h3>
+                                <p class="recipe-description" data-i18n="home.jollofDesc">Ukochane zachodnioafrykańskie danie jednogarnkowe z idealnie przyprawionym ryżem w bogatym sosie pomidorowym.</p>
                                 <div class="recipe-meta">
-                                    <span class="meta-item">⏱️ 45 min</span>
-                                    <span class="meta-item">👨‍🍳 Średni</span>
-                                    <span class="meta-item">🍽️ 6 porcji</span>
+                                    <span class="meta-item">⏱️ 45 <span data-i18n="home.metaTime">min</span></span>
+                                    <span class="meta-item">👨‍🍳 <span data-i18n="home.metaDifficulty.medium">Średni</span></span>
+                                    <span class="meta-item">🍽️ 6 <span data-i18n="home.metaServings">porcji</span></span>
                                 </div>
                                 <div class="recipe-tags">
-                                    <span class="tag">ryż</span>
-                                    <span class="tag">jednogarnkowe</span>
-                                    <span class="tag">danie główne</span>
+                                    <span class="tag" data-i18n="home.tagRice">ryż</span>
+                                    <span class="tag" data-i18n="home.tagOnePot">jednogarnkowe</span>
+                                    <span class="tag" data-i18n="home.tagMainCourse">danie główne</span>
                                 </div>
                             </div>
                         </a>
@@ -167,17 +175,17 @@
                         <a href="recipes/peanut-stew.html" class="recipe-card-link">
                             <img src="assets/images/peanut-thumb-1024x1024.webp" alt="Miska kremowego pomarańczowego gulaszu orzechowego z kawałkami słodkiego ziemniaka i zielenią" class="recipe-image" loading="lazy">
                             <div class="recipe-card-content">
-                                <h3 class="recipe-title">Zachodnioafrykański Gulasz Orzechowy</h3>
-                                <p class="recipe-description">Kremowy, sycacy wegetariański gulasz ze słodkimi ziemniakami, szpinakiem i bogatym smakiem orzechów.</p>
+                                <h3 class="recipe-title" data-i18n="home.peanutTitle">Zachodnioafrykański Gulasz Orzechowy</h3>
+                                <p class="recipe-description" data-i18n="home.peanutDesc">Kremowy, sycacy wegetariański gulasz ze słodkimi ziemniakami, szpinakiem i bogatym smakiem orzechów.</p>
                                 <div class="recipe-meta">
-                                    <span class="meta-item">⏱️ 35 min</span>
-                                    <span class="meta-item">👨‍🍳 Łatwy</span>
-                                    <span class="meta-item">🍽️ 4 porcje</span>
+                                    <span class="meta-item">⏱️ 35 <span data-i18n="home.metaTime">min</span></span>
+                                    <span class="meta-item">👨‍🍳 <span data-i18n="home.metaDifficulty.easy">Łatwy</span></span>
+                                    <span class="meta-item">🍽️ 4 <span data-i18n="home.metaServings">porcje</span></span>
                                 </div>
                                 <div class="recipe-tags">
-                                    <span class="tag">gulasz</span>
-                                    <span class="tag">wegetariański</span>
-                                    <span class="tag">comfort-food</span>
+                                    <span class="tag" data-i18n="home.tagStew">gulasz</span>
+                                    <span class="tag" data-i18n="home.tagVegetarian">wegetariański</span>
+                                    <span class="tag" data-i18n="home.tagComfortFood">comfort-food</span>
                                 </div>
                             </div>
                         </a>
@@ -188,17 +196,17 @@
                         <a href="recipes/plantain-fritters.html" class="recipe-card-link">
                             <img src="assets/images/plantain-thumb-1024x683.webp" alt="Złocisto-brązowe smażone kawałki plantaina z widocznymi przyprawami na białym talerzu" class="recipe-image" loading="lazy">
                             <div class="recipe-card-content">
-                                <h3 class="recipe-title">Placuszki z Banana Plantain (Kelewele)</h3>
-                                <p class="recipe-description">Pikantne, słodkie smażone kawałki plantaina - popularna ghańska przekąska uliczna.</p>
+                                <h3 class="recipe-title" data-i18n="home.plantainTitle">Placuszki z Banana Plantain (Kelewele)</h3>
+                                <p class="recipe-description" data-i18n="home.plantainDesc">Pikantne, słodkie smażone kawałki plantaina - popularna ghańska przekąska uliczna.</p>
                                 <div class="recipe-meta">
-                                    <span class="meta-item">⏱️ 20 min</span>
-                                    <span class="meta-item">👨‍🍳 Łatwy</span>
-                                    <span class="meta-item">🍽️ 4 porcje</span>
+                                    <span class="meta-item">⏱️ 20 <span data-i18n="home.metaTime">min</span></span>
+                                    <span class="meta-item">👨‍🍳 <span data-i18n="home.metaDifficulty.easy">Łatwy</span></span>
+                                    <span class="meta-item">🍽️ 4 <span data-i18n="home.metaServings">porcje</span></span>
                                 </div>
                                 <div class="recipe-tags">
-                                    <span class="tag">przekąska</span>
-                                    <span class="tag">wegetariański</span>
-                                    <span class="tag">smażone</span>
+                                    <span class="tag" data-i18n="home.tagSnack">przekąska</span>
+                                    <span class="tag" data-i18n="home.tagVegetarian">wegetariański</span>
+                                    <span class="tag" data-i18n="home.tagFried">smażone</span>
                                 </div>
                             </div>
                         </a>
@@ -207,15 +215,15 @@
                 </div>
                 
                 <div class="cta-section">
-                    <a href="recipes/index.html" class="btn btn-primary">Zobacz Wszystkie Przepisy</a>
+                    <a href="recipes/index.html" class="btn btn-primary" data-i18n="home.heroButton1">Zobacz Wszystkie Przepisy</a>
                 </div>
             </section>
             
             <!-- Call to Action -->
             <section class="cta-banner">
-                <h2>Gotowy do Rozpoczęcia Gotowania?</h2>
-                <p>Dołącz do tysięcy uczących się autentycznej kuchni afrykańskiej</p>
-                    <a href="recipes/index.html" class="btn btn-primary">Rozpocznij</a>
+                <h2 data-i18n="about.ctaTitle">Gotowy do Rozpoczęcia Gotowania?</h2>
+                <p data-i18n="about.ctaDesc">Dołącz do tysięcy uczących się autentycznej kuchni afrykańskiej</p>
+                    <a href="recipes/index.html" class="btn btn-primary" data-i18n="about.ctaButton">Rozpocznij</a>
             </section>
         </div>
     </main>
@@ -225,25 +233,25 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Wulkan Kibo</h3>
-                    <p>Przynosimy afrykańskie smaki do Twojej kuchni</p>
+                    <h3 data-i18n="site.footer.title">Wulkan Kibo</h3>
+                    <p data-i18n="site.footer.tagline">Przynosimy afrykańskie smaki do Twojej kuchni</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Szybkie Linki</h4>
+                    <h4 data-i18n="site.footer.quickLinks">Szybkie Linki</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Strona główna</a></li>
-                        <li><a href="recipes/index.html">Przepisy</a></li>
-                        <li><a href="about.html">O nas</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
+                        <li><a href="index.html" data-i18n="site.nav.home">Strona główna</a></li>
+                        <li><a href="recipes/index.html" data-i18n="site.nav.recipes">Przepisy</a></li>
+                        <li><a href="about.html" data-i18n="site.nav.about">O nas</a></li>
+                        <li><a href="contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Kontakt</h4>
-                    <p>Udostępnij swoje kreacje z #WulkanKibo</p>
+                    <h4 data-i18n="site.footer.contactTitle">Kontakt</h4>
+                    <p data-i18n="site.footer.shareTag">Udostępnij swoje kreacje z #WulkanKibo</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Wulkan Kibo. Licencja MIT.</p>
+                <p data-i18n="site.footer.copyright">&copy; 2024 Wulkan Kibo. Licencja MIT.</p>
             </div>
         </div>
     </footer>
@@ -260,6 +268,7 @@
         </div>
     </div>
     
+    <script src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
     
     <!-- Cookie Consent - Loaded at end to ensure DOM is ready -->

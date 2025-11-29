@@ -72,11 +72,17 @@
                     <span class="hamburger"></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Strona główna</a></li>
-                    <li><a href="recipes/index.html">Przepisy</a></li>
-                    <li><a href="about.html">O nas</a></li>
-                    <li><a href="contact.html" class="active">Kontakt</a></li>
+                    <li><a href="index.html" data-i18n="site.nav.home">Strona główna</a></li>
+                    <li><a href="recipes/index.html" data-i18n="site.nav.recipes">Przepisy</a></li>
+                    <li><a href="about.html" data-i18n="site.nav.about">O nas</a></li>
+                    <li><a href="contact.html" class="active" data-i18n="site.nav.contact">Kontakt</a></li>
                 </ul>
+                <label for="lang-select" class="sr-only" data-i18n="site.lang.label">Język</label>
+                <select id="lang-select" aria-label="Wybierz język">
+                  <option value="pl" data-i18n="site.lang.pl">Polski</option>
+                  <option value="en" data-i18n="site.lang.en">Angielski</option>
+                  <option value="fr" data-i18n="site.lang.fr">Francuski</option>
+                </select>
                 <button class="theme-toggle" aria-label="Przełącz tryb ciemny">
                     <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 12a1 1 0 001 1h2a1 1 0 000-2H3a1 1 0 00-1 1zm17 0a1 1 0 001 1h2a1 1 0 000-2h-2a1 1 0 00-1 1zm-8-7a1 1 0 011-1V3a1 1 0 00-2 0v2a1 1 0 011 1zM12 19a1 1 0 01-1 1v2a1 1 0 002 0v-2a1 1 0 01-1-1zM5.99 7.401a1 1 0 001.414-1.414L5.697 4.28A1 1 0 004.283 5.697l1.707 1.704zm12.02 9.197a1 1 0 00-1.414 1.414l1.707 1.707a1 1 0 001.414-1.414l-1.707-1.707zM4.283 18.303a1 1 0 001.414 1.414l1.707-1.707a1 1 0 00-1.414-1.414l-1.707 1.707zm13.434-13.02a1 1 0 001.414-1.414L17.424 2.16a1 1 0 00-1.414 1.414l1.707 1.707z"/></svg>
@@ -88,19 +94,19 @@
     <main id="main-content" class="main">
         <div class="container">
             <header class="page-header">
-                <h1>Skontaktuj się z Nami</h1>
-                <p>Chętnie Cię wysłuchamy!</p>
+                <h1 data-i18n="contact.title">Skontaktuj się z Nami</h1>
+                <p data-i18n="contact.subtitle">Chętnie Cię wysłuchamy!</p>
             </header>
             
             <div class="contact-content">
                 <section class="contact-intro">
-                    <p>Masz pytanie o przepis? Chcesz zaprosić konkretne afrykańskie danie? Lub po prostu chcesz podzielić się swoim sukcesem kulinarnym? Jesteśmy tutaj, aby pomóc!</p>
+                    <p data-i18n="contact.intro">Masz pytanie o przepis? Chcesz zaprosić konkretne afrykańskie danie? Lub po prostu chcesz podzielić się swoim sukcesem kulinarnym? Jesteśmy tutaj, aby pomóc!</p>
                 </section>
                 
                 <div class="contact-grid">
                     <!-- Contact Form -->
                     <section class="contact-form-section">
-                        <h2>Wyślij Nam Wiadomość</h2>
+                        <h2 data-i18n="contact.formTitle">Wyślij Nam Wiadomość</h2>
                         
                         <!-- 
                           Form submission options:
@@ -122,56 +128,62 @@
                             <input type="hidden" name="_template" value="table">
                             <input type="hidden" name="_next" value="https://wulkan-kibo.vercel.app/thank-you.html">
                             <div class="form-group">
-                                <label for="name">Imię <span class="required">*</span></label>
+                                <label for="name" data-i18n="contact.nameLabel">Imię <span class="required" data-i18n="contact.required">*</span></label>
                                 <input 
                                     type="text" 
                                     id="name" 
                                     name="name" 
                                     required 
                                     aria-required="true"
+                                    data-i18n-attr="placeholder"
+                                    data-i18n="contact.namePlaceholder"
                                     placeholder="Twoje imię">
                             </div>
                             
                             <div class="form-group">
-                                <label for="email">Email <span class="required">*</span></label>
+                                <label for="email" data-i18n="contact.emailLabel">Email <span class="required" data-i18n="contact.required">*</span></label>
                                 <input 
                                     type="email" 
                                     id="email" 
                                     name="email" 
                                     required 
                                     aria-required="true"
+                                    data-i18n-attr="placeholder"
+                                    data-i18n="contact.emailPlaceholder"
                                     placeholder="twoj.email@przyklad.pl">
                             </div>
                             
                             <div class="form-group">
-                                <label for="subject">Temat <span class="required">*</span></label>
+                                <label for="subject" data-i18n="contact.subjectLabel">Temat <span class="required" data-i18n="contact.required">*</span></label>
                                 <select id="subject" name="subject" required aria-required="true">
-                                    <option value="">Wybierz temat...</option>
-                                    <option value="recipe-question">Pytanie o Przepis</option>
-                                    <option value="recipe-request">Prośba o Przepis</option>
-                                    <option value="feedback">Opinia</option>
-                                    <option value="technical">Problem Techniczny</option>
-                                    <option value="other">Inne</option>
+                                    <option value="" data-i18n="contact.subjectPlaceholder">Wybierz temat...</option>
+                                    <option value="recipe-question" data-i18n="contact.subjectRecipeQuestion">Pytanie o Przepis</option>
+                                    <option value="recipe-request" data-i18n="contact.subjectRecipeRequest">Prośba o Przepis</option>
+                                    <option value="feedback" data-i18n="contact.subjectFeedback">Opinia</option>
+                                    <option value="technical" data-i18n="contact.subjectTechnical">Problem Techniczny</option>
+                                    <option value="other" data-i18n="contact.subjectOther">Inne</option>
                                 </select>
                             </div>
                             
                             <div class="form-group">
-                                <label for="message">Wiadomość <span class="required">*</span></label>
+                                <label for="message" data-i18n="contact.messageLabel">Wiadomość <span class="required" data-i18n="contact.required">*</span></label>
                                 <textarea 
                                     id="message" 
                                     name="message" 
                                     rows="6" 
                                     required 
                                     aria-required="true"
+                                    data-i18n-attr="placeholder"
+                                    data-i18n="contact.messagePlaceholder"
                                     placeholder="Powiedz nam, co Cię nurtuje..."></textarea>
                             </div>
                             
-                            <button type="submit" class="btn btn-primary">Wyślij Wiadomość</button>
+                            <button type="submit" class="btn btn-primary" data-i18n="contact.submitButton">Wyślij Wiadomość</button>
                         </form>
                         
                         <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
                         
-                        <p class="form-note">
+                        <p class="form-note" data-i18n="contact.formNote">
                             Po wysłaniu po raz pierwszy FormSubmit wyśle wiadomość z prośbą o potwierdzenie adresu e‑mail. Po potwierdzeniu kolejne zgłoszenia trafią bezpośrednio do skrzynki odbiorczej.
                         </p>
                     </section>
@@ -179,12 +191,12 @@
                     <!-- Alternative Contact Methods -->
                     <aside class="contact-sidebar">
                         <section class="contact-info-box">
-                            <h2>Inne Sposoby Kontaktu</h2>
+                            <h2 data-i18n="contact.otherContactTitle">Inne Sposoby Kontaktu</h2>
                             
                             <div class="contact-method">
                                 <span class="contact-icon">📧</span>
                                 <div>
-                                    <h3>Email</h3>
+                                    <h3 data-i18n="contact.emailTitle">Email</h3>
                                     <a href="mailto:wulkan.kibo@gmail.com">wulkan.kibo@gmail.com</a>
                                 </div>
                             </div>
@@ -192,16 +204,16 @@
                             <div class="contact-method">
                                 <span class="contact-icon">💬</span>
                                 <div>
-                                    <h3>Media Społecznościowe</h3>
-                                    <p>Śledź nas i dziel się swoimi kreacjami z <strong>@WulkanKibo</strong></p>
+                                    <h3 data-i18n="contact.socialTitle">Media Społecznościowe</h3>
+                                    <p><span data-i18n="contact.socialDesc">Śledź nas i dziel się swoimi kreacjami z</span> <strong>@WulkanKibo</strong></p>
                                 </div>
                             </div>
                             
                             <div class="contact-method">
                                 <span class="contact-icon">⏰</span>
                                 <div>
-                                    <h3>Czas Odpowiedzi</h3>
-                                    <p>Zazwyczaj odpowiadamy w ciągu 24-48 godzin</p>
+                                    <h3 data-i18n="contact.responseTitle">Czas Odpowiedzi</h3>
+                                    <p data-i18n="contact.responseDesc">Zazwyczaj odpowiadamy w ciągu 24-48 godzin</p>
                                 </div>
                             </div>
                         </section>
@@ -231,29 +243,30 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Wulkan Kibo</h3>
-                    <p>Przynosimy afrykańskie smaki do Twojej kuchni</p>
+                    <h3 data-i18n="site.footer.title">Wulkan Kibo</h3>
+                    <p data-i18n="site.footer.tagline">Przynosimy afrykańskie smaki do Twojej kuchni</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Szybkie Linki</h4>
+                    <h4 data-i18n="site.footer.quickLinks">Szybkie Linki</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Strona główna</a></li>
-                        <li><a href="recipes/index.html">Przepisy</a></li>
-                        <li><a href="about.html">O nas</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
+                        <li><a href="index.html" data-i18n="site.nav.home">Strona główna</a></li>
+                        <li><a href="recipes/index.html" data-i18n="site.nav.recipes">Przepisy</a></li>
+                        <li><a href="about.html" data-i18n="site.nav.about">O nas</a></li>
+                        <li><a href="contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Kontakt</h4>
-                    <p>Udostępnij swoje kreacje z #WulkanKibo</p>
+                    <h4 data-i18n="site.footer.contactTitle">Kontakt</h4>
+                    <p data-i18n="site.footer.shareTag">Udostępnij swoje kreacje z #WulkanKibo</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Wulkan Kibo. Licencja MIT.</p>
+                <p data-i18n="site.footer.copyright">&copy; 2024 Wulkan Kibo. Licencja MIT.</p>
             </div>
         </div>
     </footer>
     
+    <script src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
     <script src="assets/js/cookie-consent.js"></script>
 </body>

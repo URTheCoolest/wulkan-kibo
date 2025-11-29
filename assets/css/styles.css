@@ -1653,3 +1653,119 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Language Select Styling */
+#lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.55rem 2.4rem 0.55rem 2.1rem;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: 0 8px 24px rgba(255, 122, 24, 0.35);
+  backdrop-filter: saturate(1.1) brightness(1.02);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+  margin-left: var(--spacing-sm);
+  background-clip: border-box;
+  background-origin: border-box;
+  /* Layer icons over the gradient to prevent duplication */
+  background-image: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><path d="M2 12h20"/><path d="M12 2a15 15 0 010 20"/></svg>'),
+    linear-gradient(135deg, #ff7a18 0%, #ff8a2a 40%, #ff9f3c 70%, #ffb86b 100%);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: right 10px center, left 10px center, 0 0;
+  background-size: 16px 16px, 16px 16px, 100% 100%;
+}
+
+#lang-select:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(255, 122, 24, 0.5);
+  filter: brightness(1.03);
+  /* Keep icons, only adjust gradient layer */
+  background-image: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><path d="M2 12h20"/><path d="M12 2a15 15 0 010 20"/></svg>'),
+    linear-gradient(135deg, #ff7a18 0%, #ff8f30 40%, #ffa341 70%, #ffbf7a 100%);
+}
+
+#lang-select:focus {
+  outline: 2px solid rgba(255, 122, 24, 0.35);
+  outline-offset: 2px;
+}
+
+#lang-select:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(255, 122, 24, 0.35);
+  /* Keep icons, adjust gradient */
+  background-image:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><path d="M2 12h20"/><path d="M12 2a15 15 0 010 20"/></svg>'),
+    linear-gradient(135deg, #ff6e10 0%, #ff8728 40%, #ff9b3a 70%, #ffb366 100%);
+}
+
+/* Custom dropdown arrow: handled in primary #lang-select block above with layered backgrounds */
+
+/* Dark/Light theme adjustments */
+[data-theme="dark"] #lang-select {
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(255, 122, 24, 0.3);
+  /* Ensure white icons in dark mode, keep gradient layer last */
+  background-image: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><path d="M2 12h20"/><path d="M12 2a15 15 0 010 20"/></svg>'),
+    linear-gradient(135deg, #ff7a18 0%, #ff8a2a 40%, #ff9f3c 70%, #ffb86b 100%);
+}
+
+[data-theme="light"] #lang-select {
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 22px rgba(255, 122, 24, 0.28);
+  /* Dark icons over gradient in light mode */
+  background-image: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%231a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%231a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7"/><path d="M2 12h20"/><path d="M12 2a15 15 0 010 20"/></svg>'),
+    linear-gradient(135deg, #ff7a18 0%, #ff8a2a 40%, #ff9f3c 70%, #ffb86b 100%);
+}
+
+/* Dropdown option styling (limited by browser support) */
+#lang-select option {
+  font-weight: 600;
+}
+
+[data-theme="light"] #lang-select option {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+[data-theme="dark"] #lang-select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Hide default arrow in legacy browsers */
+#lang-select::-ms-expand {
+  display: none;
+}
+
+/* Reduce size on small screens */
+@media (max-width: 640px) {
+  #lang-select {
+    padding: 0.45rem 2rem 0.45rem 1.8rem;
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #lang-select {
+    transition: none;
+  }
+}

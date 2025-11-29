@@ -167,11 +167,17 @@
                     <span class="hamburger"></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Strona główna</a></li>
-                    <li><a href="recipes/index.html">Przepisy</a></li>
-                    <li><a href="about.html" class="active">O nas</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="index.html" data-i18n="site.nav.home">Strona główna</a></li>
+                    <li><a href="recipes/index.html" data-i18n="site.nav.recipes">Przepisy</a></li>
+                    <li><a href="about.html" class="active" data-i18n="site.nav.about">O nas</a></li>
+                    <li><a href="contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
                 </ul>
+                <label for="lang-select" class="sr-only" data-i18n="site.lang.label">Język</label>
+                <select id="lang-select" aria-label="Wybierz język">
+                  <option value="pl" data-i18n="site.lang.pl">Polski</option>
+                  <option value="en" data-i18n="site.lang.en">Angielski</option>
+                  <option value="fr" data-i18n="site.lang.fr">Francuski</option>
+                </select>
                 <button class="theme-toggle" aria-label="Przełącz tryb ciemny">
                     <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 12a1 1 0 001 1h2a1 1 0 000-2H3a1 1 0 00-1 1zm17 0a1 1 0 001 1h2a1 1 0 000-2h-2a1 1 0 00-1 1zm-8-7a1 1 0 011-1V3a1 1 0 00-2 0v2a1 1 0 011 1zM12 19a1 1 0 01-1 1v2a1 1 0 002 0v-2a1 1 0 01-1-1zM5.99 7.401a1 1 0 001.414-1.414L5.697 4.28A1 1 0 004.283 5.697l1.707 1.704zm12.02 9.197a1 1 0 00-1.414 1.414l1.707 1.707a1 1 0 001.414-1.414l-1.707-1.707zM4.283 18.303a1 1 0 001.414 1.414l1.707-1.707a1 1 0 00-1.414-1.414l-1.707 1.707zm13.434-13.02a1 1 0 001.414-1.414L17.424 2.16a1 1 0 00-1.414 1.414l1.707 1.707z"/></svg>
@@ -183,69 +189,69 @@
     <main id="main-content" class="main">
         <div class="container">
             <header class="page-header">
-                <h1>O Wulkan Kibo</h1>
-                <p>Przynosimy bogate smaki Afryki do kuchni na całym świecie</p>
+                <h1 data-i18n="about.title">O Wulkan Kibo</h1>
+                <p data-i18n="about.intro">Przynosimy bogate smaki Afryki do kuchni na całym świecie</p>
             </header>
             
             <section class="about-content">
                 <article class="about-section">
-                    <h2>Nasza Historia</h2>
-                    <p>Wulkan Kibo powstał z pasji dzielenia się niesamowitą różnorodnością i bogactwem kuchni afrykańskiej ze światem. Nazwany od Kilimandżaro (Kibo jest jego najwyższym szczytem), dążymy do osiągnięcia szczytów edukacji kulinarnej i docenienia kultury.</p>
+                    <h2 data-i18n="about.ourStoryTitle">Nasza Historia</h2>
+                    <p data-i18n="about.ourStoryP1">Wulkan Kibo powstał z pasji dzielenia się niesamowitą różnorodnością i bogactwem kuchni afrykańskiej ze światem. Nazwany od Kilimandżaro (Kibo jest jego najwyższym szczytem), dążymy do osiągnięcia szczytów edukacji kulinarnej i docenienia kultury.</p>
                     
-                    <p>Afrykańskie jedzenie to więcej niż tylko pożywienie - to świętowanie wspólnoty, tradycji i dobór ziemi. Od pikantnych debat o ryżu jollof w Afryce Zachodniej po aromatyczne gulasze Afryki Wschodniej, każde danie opowiada historię dziedzictwa i miłości.</p>
+                    <p data-i18n="about.ourStoryP2">Afrykańskie jedzenie to więcej niż tylko pożywienie - to świętowanie wspólnoty, tradycji i dobór ziemi. Od pikantnych debat o ryżu jollof w Afryce Zachodniej po aromatyczne gulasze Afryki Wschodniej, każde danie opowiada historię dziedzictwa i miłości.</p>
                 </article>
                 
                 <article class="about-section">
-                    <h2>Nasza Misja</h2>
-                    <p>Wierzymy, że każdy powinien mieć dostęp do autentycznych afrykańskich przepisów i wiedzy, jak przygotować je z pewnością. Nasza misja to:</p>
+                    <h2 data-i18n="about.ourMissionTitle">Nasza Misja</h2>
+                    <p data-i18n="about.ourMissionIntro">Wierzymy, że każdy powinien mieć dostęp do autentycznych afrykańskich przepisów i wiedzy, jak przygotować je z pewnością. Nasza misja to:</p>
                     <ul class="mission-list">
-                        <li>Zachować i dzielić się tradycyjnymi afrykańskimi technikami gotowania poprzez samouczki wideo</li>
-                        <li>Udostępnić kuchnię afrykańską kucharzom domowym wszystkich poziomów umiejętności</li>
-                        <li>Świętować różnorodność kultur kulinarnych Afryki na całym kontynencie</li>
-                        <li>Budować społeczność miłośników jedzenia, którzy doceniają afrykańskie smaki</li>
-                        <li>Dostarczać jasne, szczegółowe instrukcje, które honorują autentyczne przygotowanie</li>
+                        <li data-i18n="about.mission1">Zachować i dzielić się tradycyjnymi afrykańskimi technikami gotowania poprzez samouczki wideo</li>
+                        <li data-i18n="about.mission2">Udostępnić kuchnię afrykańską kucharzom domowym wszystkich poziomów umiejętności</li>
+                        <li data-i18n="about.mission3">Świętować różnorodność kultur kulinarnych Afryki na całym kontynencie</li>
+                        <li data-i18n="about.mission4">Budować społeczność miłośników jedzenia, którzy doceniają afrykańskie smaki</li>
+                        <li data-i18n="about.mission5">Dostarczać jasne, szczegółowe instrukcje, które honorują autentyczne przygotowanie</li>
                     </ul>
                 </article>
                 
                 <article class="about-section">
-                    <h2>Co Oferujemy</h2>
+                    <h2 data-i18n="about.whatWeOfferTitle">Co Oferujemy</h2>
                     <div class="features-grid">
                         <div class="feature-card">
                             <span class="feature-icon">📹</span>
-                            <h3>Samouczki Wideo</h3>
-                            <p>Przewodniki wideo krok po kroku pokazujące dokładnie, jak przygotować każde danie, od początku do końca.</p>
+                            <h3 data-i18n="about.feature1Title">Samouczki Wideo</h3>
+                            <p data-i18n="about.feature1Desc">Przewodniki wideo krok po kroku pokazujące dokładnie, jak przygotować każde danie, od początku do końca.</p>
                         </div>
                         <div class="feature-card">
                             <span class="feature-icon">📖</span>
-                            <h3>Szczegółowe Przepisy</h3>
-                            <p>Kompleksowe pisemne instrukcje z listami składników, czasami gotowania i pomocnymi wskazówkami.</p>
+                            <h3 data-i18n="about.feature2Title">Szczegółowe Przepisy</h3>
+                            <p data-i18n="about.feature2Desc">Kompleksowe pisemne instrukcje z listami składników, czasami gotowania i pomocnymi wskazówkami.</p>
                         </div>
                         <div class="feature-card">
                             <span class="feature-icon">🌍</span>
-                            <h3>Kontekst Kulturowy</h3>
-                            <p>Dowiedz się o historii i znaczeniu kulturowym każdego dania i techniki gotowania.</p>
+                            <h3 data-i18n="about.feature3Title">Kontekst Kulturowy</h3>
+                            <p data-i18n="about.feature3Desc">Dowiedz się o historii i znaczeniu kulturowym każdego dania i techniki gotowania.</p>
                         </div>
                         <div class="feature-card">
                             <span class="feature-icon">👥</span>
-                            <h3>Społeczność</h3>
-                            <p>Dołącz do rosnącej społeczności entuzjastów jedzenia dzielących się swoimi doświadczeniami z afrykańskim gotowaniem.</p>
+                            <h3 data-i18n="about.feature4Title">Społeczność</h3>
+                            <p data-i18n="about.feature4Desc">Dołącz do rosnącej społeczności entuzjastów jedzenia dzielących się swoimi doświadczeniami z afrykańskim gotowaniem.</p>
                         </div>
                     </div>
                 </article>
                 
                 <article class="about-section">
-                    <h2>Dlaczego "Wulkan Kibo"?</h2>
-                    <p>Kilimandżaro, znane lokalnie jako "Kibo", wznosi się jako najwyższy szczyt Afryki - symbol siły, piękna i cudu natury. Podobnie jak góra, kuchnia afrykańska osiąga wielkie wysokości dzięki swoim odważnym smakom, różnorodnym składnikom i uhonorowę tradycjom.</p>
+                    <h2 data-i18n="about.whyNameTitle">Dlaczego "Wulkan Kibo"?</h2>
+                    <p data-i18n="about.whyNameP1">Kilimandżaro, znane lokalnie jako "Kibo", wznosi się jako najwyższy szczyt Afryki - symbol siły, piękna i cudu natury. Podobnie jak góra, kuchnia afrykańska osiąga wielkie wysokości dzięki swoim odważnym smakom, różnorodnym składnikom i uhonorowę tradycjom.</p>
                     
-                    <p>"Wulkan" (wulkan) reprezentuje pasję i energię, która wchodzi w każde danie - ogień, który przekształca surowe składniki w niezapomniane posiłki dzielone z rodziną i przyjaciółmi.</p>
+                    <p data-i18n="about.whyNameP2">"Wulkan" (wulkan) reprezentuje pasję i energię, która wchodzi w każde danie - ogień, który przekształca surowe składniki w niezapomniane posiłki dzielone z rodziną i przyjaciółmi.</p>
                 </article>
             </section>
         </div>
         
         <!-- Team Section with Own Container -->
         <div class="team-section">
-            <h2 style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem; text-align: center;">Poznaj Zespół</h2>
-            <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;">Wulkan Kibo jest ożywiany przez pasjonatyczny zespół oddany dzieleniu się pięknem kuchni afrykańskiej ze światem.</p>
+            <h2 style="font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem; text-align: center;" data-i18n="about.teamTitle">Poznaj Zespół</h2>
+            <p style="text-align: center; color: var(--color-text-light); margin-bottom: 2rem;" data-i18n="about.teamSubtitle">Wulkan Kibo jest ożywiany przez pasjonatyczny zespół oddany dzieleniu się pięknem kuchni afrykańskiej ze światem.</p>
             
             <div class="team-container">
                 <div class="team-card">
@@ -253,8 +259,8 @@
                         <img src="assets/images/team/jarod.jpg" alt="Jarod Djoni-Kinzola">
                     </div>
                     <h3 class="team-name">Jarod Djoni-Kinzola</h3>
-                    <p class="team-position">Kapitan drużyny i kucharz</p>
-                    <p class="team-description">To co mnie motywowało do tworzenia tego projektu, był chcęć pokazania innym ludziom moją kulturę i jedzenie. Myślę, że najbardziej spodoba mi się możliwość gotowania, pracy w grupie i rozpoczęcie nową przygodę.</p>
+                    <p class="team-position" data-i18n="about.teamJarodRole">Kapitan drużyny i kucharz</p>
+                    <p class="team-description" data-i18n="about.teamJarodBio">To co mnie motywowało do tworzenia tego projektu, był chęć pokazania innym ludziom moją kulturę i jedzenie. Myślę, że najbardziej spodoba mi się możliwość gotowania, pracy w grupie i rozpoczęcie nową przygodę.</p>
                 </div>
                 
                 <div class="team-card">
@@ -262,8 +268,8 @@
                         <img src="assets/images/team/josiah.jpg" alt="Josiah Ennis">
                     </div>
                     <h3 class="team-name">Josiah Ennis</h3>
-                    <p class="team-position">Technik i kamerzysta</p>
-                    <p class="team-description">Jestem odpowiedzialny za stronę techniczną projektu — od obsługi strony internetowej po nagrywanie materiałów wideo. Specjalizuję się w sprawach IT i sprzęcie filmowym. Dołączyłem do Wulkan Kibo, bo widzę w tym projekcie ogromny potencjał… i po prostu kocham jedzenie.</p>
+                    <p class="team-position" data-i18n="about.teamJosiahRole">Technik i kamerzysta</p>
+                    <p class="team-description" data-i18n="about.teamJosiahBio">Jestem odpowiedzialny za stronę techniczną projektu — od obsługi strony internetowej po nagrywanie materiałów wideo. Specjalizuję się w sprawach IT i sprzęcie filmowym. Dołączyłem do Wulkan Kibo, bo widzę w tym projekcie ogromny potencjał… i po prostu kocham jedzenie.</p>
                 </div>
                 
                 <div class="team-card">
@@ -271,8 +277,8 @@
                         <img src="assets/images/team/iga.jpg" alt="Iga Zakrzewska">
                     </div>
                     <h3 class="team-name">Iga Zakrzewska</h3>
-                    <p class="team-position">Grafik oraz pomocnik</p>
-                    <p class="team-description">Od małego uwielbiam poznawać nowe kultury szczególnie jeśli chodzi o smaki z różnych stron świata. Jestem bardzo zdeterminowana do tego żeby, poznać nową tradycyjną kuchnię i chętnie rozwinę umiejętności w tym kierunku. Myślę że,to może być wspaniała przygoda która, pozwoli wszystkim odkryć nowe możliwości.</p>
+                    <p class="team-position" data-i18n="about.teamIgaRole">Grafik oraz pomocnik</p>
+                    <p class="team-description" data-i18n="about.teamIgaBio">Od małego uwielbiam poznawać nowe kultury szczególnie jeśli chodzi o smaki z różnych stron świata. Jestem bardzo zdeterminowana do tego żeby, poznać nową tradycyjną kuchnię i chętnie rozwinę umiejętności w tym kierunku. Myślę że,to może być wspaniała przygoda która, pozwoli wszystkim odkryć nowe możliwości.</p>
                 </div>
                 
                 <div class="team-card">
@@ -280,8 +286,8 @@
                         <img src="assets/images/team/nina.jpg" alt="Nina Górska">
                     </div>
                     <h3 class="team-name">Nina Górska</h3>
-                    <p class="team-position">Pomocnik kucharza</p>
-                    <p class="team-description">Interesuje się poznawaniem nowych kultur i smaków z różnych zakątków świata. Chciałabym dowiedzieć się więcej o kuchni afrykańskiej, jej tradycjach i przyprawach. Lubię rozwijać smoje umiejętności kulinarne. Z tąd świetnym pomysłem było stworzenie ekipy i wzięcie udziału w projekcie: Wulkan Kibo</p>
+                    <p class="team-position" data-i18n="about.teamNinaRole">Pomocnik kucharza</p>
+                    <p class="team-description" data-i18n="about.teamNinaBio">Interesuje się poznawaniem nowych kultur i smaków z różnych zakątków świata. Chciałabym dowiedzieć się więcej o kuchni afrykańskiej, jej tradycjach i przyprawach. Lubię rozwijać smoje umiejętności kulinarne. Z tąd świetnym pomysłem było stworzenie ekipy i wzięcie udziału w projekcie: Wulkan Kibo</p>
                 </div>
                 
                 <div class="team-card">
@@ -289,8 +295,8 @@
                         <img src="assets/images/team/roman.jpg" alt="Roman Tomza-Michalski">
                     </div>
                     <h3 class="team-name">Roman Tomza-Michalski</h3>
-                    <p class="team-position">Pomocnik kucharza</p>
-                    <p class="team-description">Jestem osobą ciekawą nowych smaków i doświadczeni kulinarnych. Też bardzo lubię eksperymentować z nowymi projektami takimi jak Wulkan Kibo. I mam nadzieję że razem ugotujemy wiele pysznych potraw.</p>
+                    <p class="team-position" data-i18n="about.teamRomanRole">Pomocnik kucharza</p>
+                    <p class="team-description" data-i18n="about.teamRomanBio">Jestem osobą ciekawą nowych smaków i doświadczeni kulinarnych. Też bardzo lubię eksperymentować z nowymi projektami takimi jak Wulkan Kibo. I mam nadzieję że razem ugotujemy wiele pysznych potraw.</p>
                 </div>
                 
                 <div class="team-card">
@@ -298,8 +304,8 @@
                         <img src="assets/images/team/ignacy.jpg" alt="Ignacy Balabuch">
                     </div>
                     <h3 class="team-name">Ignacy Balabuch</h3>
-                    <p class="team-position">Pomocnik kucharza</p>
-                    <p class="team-description">Na co dzień uwielbiam gotować i próbować różnych nowych przepisów. Mam ogromną nadzieję że w trakcie projektu Wulkan Kibo dowiem się więcej o kuchni afrykańskiej i o jej kulturze. Poza kulinarnymi zainteresowaniami interesuje się bardzo tenisem ziemnym.</p>
+                    <p class="team-position" data-i18n="about.teamIgnacyRole">Pomocnik kucharza</p>
+                    <p class="team-description" data-i18n="about.teamIgnacyBio">Na co dzień uwielbiam gotować i próbować różnych nowych przepisów. Mam ogromnnadzieję że w trakcie projektu Wulkan Kibo dowiem się więcej o kuchni afrykańskiej i o jej kulturze. Poza kulinarnymi zainteresowaniami interesuje się bardzo tenisem ziemnym.</p>
                 </div>
             </div>
         </div>
@@ -307,15 +313,15 @@
         <div class="container">
             <section class="about-content">
                 <article class="about-section join-journey">
-                    <h2>Dołącz do Naszej Podróży</h2>
-                    <p>Niezależnie od tego, czy odkrywasz kuchnię afrykańską po raz pierwszy, czy chcesz udoskonalić rodzinne przepisy, Wulkan Kibo jest tutaj, aby Cię poprowadzić. Ciągle dodajemy nowe przepisy, wskazówki i zasoby, aby pomóc Ci opanować sztukę afrykańskiego gotowania.</p>
+                    <h2 data-i18n="about.joinTitle">Dołącz do Naszej Podróży</h2>
+                    <p data-i18n="about.joinP1">Niezależnie od tego, czy odkrywasz kuchnię afrykańską po raz pierwszy, czy chcesz udoskonalić rodzinne przepisy, Wulkan Kibo jest tutaj, aby Cię poprowadzić. Ciągle dodajemy nowe przepisy, wskazówki i zasoby, aby pomóc Ci opanować sztukę afrykańskiego gotowania.</p>
                     
-                    <p>Udostępnij swoje kulinarne przygody z nami używając <strong>#WulkanKibo</strong> w mediach społecznościowych. Uwielbiamy widzieć, jak nasze przepisy ożywają w Twoich kuchniach na całym świecie!</p>
+                    <p><span data-i18n="about.joinP2">Udostępnij swoje kulinarne przygody z nami używając</span> <strong>#WulkanKibo</strong> <span data-i18n="about.joinP2b">w mediach społecznościowych. Uwielbiamy widzieć, jak nasze przepisy ożywają w Twoich kuchniach na całym świecie!</span></p>
                     
                     <section class="cta-banner" style="margin-top:3rem;">
-                        <h2>Gotowy do Rozpoczęcia Gotowania?</h2>
-                        <p>Dołącz do tysięcy uczących się autentycznej kuchni afrykańskiej</p>
-                        <a href="recipes/index.html" class="btn btn-primary">Rozpocznij</a>
+                        <h2 data-i18n="about.ctaTitle">Gotowy do Rozpoczęcia Gotowania?</h2>
+                        <p data-i18n="about.ctaDesc">Dołącz do tysięcy uczących się autentycznej kuchni afrykańskiej</p>
+                        <a href="recipes/index.html" class="btn btn-primary" data-i18n="about.ctaButton">Rozpocznij</a>
                     </section>
                 </article>
             </section>
@@ -326,29 +332,30 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Wulkan Kibo</h3>
-                    <p>Przynosimy afrykańskie smaki do Twojej kuchni</p>
+                    <h3 data-i18n="site.footer.title">Wulkan Kibo</h3>
+                    <p data-i18n="site.footer.tagline">Przynosimy afrykańskie smaki do Twojej kuchni</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Szybkie Linki</h4>
+                    <h4 data-i18n="site.footer.quickLinks">Szybkie Linki</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Strona główna</a></li>
-                        <li><a href="recipes/index.html">Przepisy</a></li>
-                        <li><a href="about.html">O nas</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
+                        <li><a href="index.html" data-i18n="site.nav.home">Strona główna</a></li>
+                        <li><a href="recipes/index.html" data-i18n="site.nav.recipes">Przepisy</a></li>
+                        <li><a href="about.html" data-i18n="site.nav.about">O nas</a></li>
+                        <li><a href="contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Kontakt</h4>
-                    <p>Udostępnij swoje kreacje z #WulkanKibo</p>
+                    <h4 data-i18n="site.footer.contactTitle">Kontakt</h4>
+                    <p data-i18n="site.footer.shareTag">Udostępnij swoje kreacje z #WulkanKibo</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Wulkan Kibo. Licencja MIT.</p>
+                <p data-i18n="site.footer.copyright">&copy; 2024 Wulkan Kibo. Licencja MIT.</p>
             </div>
         </div>
     </footer>
     
+    <script src="/assets/js/i18n.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
     <script src="assets/js/cookie-consent.js"></script>
 </body>
