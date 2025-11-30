@@ -65,8 +65,6 @@ The website is built as a modern static site with no build step required:
 
 ### Root Files
 
-### Root Files
-
 ```
 ├── index.html              # Home page with hero, featured recipes, and search
 ├── about.html              # About page with mission and team information
@@ -78,8 +76,6 @@ The website is built as a modern static site with no build step required:
 ├── vercel.json             # Vercel deployment configuration
 └── LICENSE                 # MIT License
 ```
-
-### HTML Pages
 
 ### HTML Pages
 
