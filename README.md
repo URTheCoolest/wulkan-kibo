@@ -1,133 +1,332 @@
-# Wulkan Kibo (static scaffold)
-**Project Overview**
+# 🌋 Wulkan Kibo
 
-- **Type**: Static HTML website (hand-authored pages, CSS and JavaScript).
-- **Deployment config**: `vercel.json` is present and configured to serve `public/**` using `@vercel/static` (see **Build / Deployment** below for implications).
+> Learn to cook authentic African dishes with video tutorials, detailed recipes, and step-by-step instructions.
 
-This repository contains a small static website for "Wulkan Kibo" — a collection of HTML recipe pages, a shared stylesheet and a site-wide JS file that powers navigation, search, filters, and a demo contact form.
+**Wulkan Kibo** is a multilingual web platform dedicated to sharing the rich culinary traditions of African cuisine with the world. Through comprehensive video tutorials, detailed recipes, and cultural insights, we make it easy for anyone to master authentic African cooking at home.
 
-**File Outline**
+## 🌍 About the Project
 
-- **`vercel.json`**: Vercel configuration. Specifies `"builds": [{ "src": "public/**", "use": "@vercel/static" }]` meaning Vercel will serve files under `public/` as a static site.
-- **`robots.txt`**: Search engine robots settings and a `Sitemap:` reference pointing at the deployed Vercel domain.
-- **`sitemap.xml`**: Sitemap listing the main site URLs (absolute URLs pointing to a Vercel app). Useful for SEO.
-- **`LICENSE`**: MIT license for the repository.
-- **`.gitignore`** / **`.gitattributes`**: Git helpers (ignore rules and attributes).
+Wulkan Kibo (Swahili for "Volcano Kibo" - the highest peak of Mount Kilimanjaro) represents the peak of African culinary excellence. Our mission is to preserve and share traditional African recipes, cooking techniques, and food culture through an accessible, modern web experience.
 
-**Top-level HTML Pages**
+### Key Features
 
-- **`index.html`**: Home / landing page. Contains hero, featured recipes, search box, navigation, hero CTA buttons, video modal markup, and includes `assets/css/styles.css` and `assets/js/main.js`.
-- **`about.html`**: About page with mission, features, and a team section (references team images in `assets/images/team/`).
-- **`contact.html`**: Contact page with a demo contact form (client-side handling in `assets/js/main.js`) and notes about using Formspree or a serverless endpoint.
+- **🎥 Video Tutorials**: High-quality cooking demonstrations for each recipe
+- **📖 Detailed Recipes**: Step-by-step instructions with ingredients, cooking times, and tips
+- **🌐 Multilingual Support**: Full internationalization (Polish, English, French)
+- **🔍 Smart Search & Filtering**: Find recipes by name, ingredients, or cuisine type
+- **📱 Responsive Design**: Seamless experience across desktop, tablet, and mobile devices
+- **🌙 Dark/Light Theme**: User-selectable theme with preference persistence
+- **♿ Accessible**: Built with WCAG compliance in mind
+- **🚀 SEO Optimized**: Structured data, meta tags, and sitemap for discoverability
 
-**Recipes Directory (`recipes/`)**
+## 🍲 Recipe Collection
 
-- **`recipes/index.html`**: Recipes listing page — search input, filter tags, client-side pagination placeholder, and recipe cards linking to individual recipe pages.
-- **`recipes/african-jollof.html`**: Recipe detail for African Jollof Rice. Includes JSON-LD structured data (`<script type="application/ld+json">`), ingredients, steps, video embed (YouTube fallback), and tips.
-- **`recipes/peanut-stew.html`**: Recipe detail for West African Peanut Stew. Includes structured data, video embed, and full instructions.
-- **`recipes/plantain-fritters.html`**: Recipe detail for Plantain Fritters (Kelewele). Same structure as the other recipe pages.
+Current recipes include:
+- **African Jollof Rice** - The iconic West African one-pot rice dish
+- **West African Peanut Stew** - Rich and hearty groundnut-based stew
+- **Plantain Fritters (Kelewele)** - Spiced fried plantain snack
 
-**Assets**
+Each recipe includes:
+- JSON-LD structured data for rich search results
+- Embedded YouTube video tutorials
+- Detailed ingredient lists and measurements
+- Step-by-step cooking instructions
+- Pro tips and cultural context
+- Nutritional information
 
-- **`assets/css/styles.css`**: Main stylesheet (large, production-ready CSS). Contains theme variables, responsive layout rules, components (hero, nav, recipe cards, forms, modal, team, etc.), print styles, and reduced-motion support.
-- **`assets/js/main.js`**: Main JavaScript file that:
-	- Manages theme toggle and persists choice in `localStorage`.
-	- Handles mobile navigation toggle.
-	- Implements debounced search on the home and recipe listing pages.
-	- Implements client-side tag filtering and simple client-side pagination.
-	- Provides video modal open/close and YouTube iframe insertion.
-	- Provides a demo contact form submission flow (simulated success) and instructions for integrating Formspree or a serverless endpoint.
-	- Includes a development helper `generateSitemap()` and exposes it to `window`.
-- **`assets/icons/`**
-	- **`favicon.svg`**: Scalable favicon used in pages. An optional `favicon.png` is referenced in some pages (check presence).
-- **`assets/images/`**
-	- Various recipe thumbnails and hero images such as `jollof-thumb.png`, `jollof-thumb-2.png`, `peanut-thumb.png`, `peanut-thumb-2.png`, `plantain-thumb.png` and others.
-	- **`assets/images/team/`**: Team member photos referenced on the About page (`jarod.png`, `josiah.png`, `iga.png`, etc.).
+## 🛠️ Technical Overview
 
-**Public Directory (`public/`)**
+**Type**: Static HTML website (hand-authored pages, CSS and JavaScript)  
+**Deployment**: Configured for Vercel with static site deployment
 
-- The workspace also includes a `public/` directory with a parallel `assets/` copy (e.g. `public/assets/css/styles.css`). The Vercel config targets `public/**` for deployment. This repository currently contains site pages at the repository root (not under `public/`), which affects deployment (see below).
+## 🛠️ Technical Overview
 
-**Config & Meta Files**
+**Type**: Static HTML website (hand-authored pages, CSS and JavaScript)  
+**Deployment**: Configured for Vercel with static site deployment
 
-- **`manifest.json`**: Referenced from `index.html` (`<link rel="manifest" href="manifest.json">`) — I did not find a `manifest.json` file in the repo. If you need PWA support, add `manifest.json` to the root or `public/`.
-- **`sitemap.xml`**: Exists at repo root and lists site URLs. Update the `<loc>` entries to match your final domain.
-- **`robots.txt`**: Allows all crawlers and points to the sitemap hosted on the Vercel domain.
+### Architecture
 
-**Build / Deployment Notes**
+The website is built as a modern static site with no build step required:
 
-- The site is a static site (no server-side framework like Next.js detected). All pages are pre-written HTML files.
-- `vercel.json` currently uses `@vercel/static` with `src: "public/**"`. This means only files placed under `public/` will be served by Vercel when using that config. Two common options:
-	- Move or copy your HTML files and assets into `public/` (mirror the repo root pages into `public/`) so Vercel serves them as-is.
-	- Or update `vercel.json` to change the `src` or use a different target (for example, remove `builds` so Vercel serves the repository root, or change to `src: "**"` depending on your needs).
-- If you want a simple deploy of the current layout without moving files, remove or edit `vercel.json` so Vercel's default static configuration serves the repo root.
+- **Pure HTML/CSS/JS**: No frameworks or bundlers - just clean, maintainable web standards
+- **Component-based CSS**: Modular styling with CSS custom properties for theming
+- **Progressive Enhancement**: Core content accessible without JavaScript
+- **Client-side Rendering**: Dynamic features like search, filtering, and theme switching handled via vanilla JavaScript
 
-**SEO & Accessibility**
+### Technology Stack
 
-- Pages include meta tags for SEO, Open Graph, and Twitter cards.
-- Recipe pages include JSON-LD `Recipe` structured data to improve rich results in search.
-- Accessibility considerations present: skip links, aria attributes, focus handling in modal, accessible form labels.
+- **HTML5**: Semantic markup with accessibility attributes
+- **CSS3**: Modern CSS with Grid, Flexbox, custom properties, and media queries
+- **Vanilla JavaScript**: Zero dependencies - all features built with native browser APIs
+- **JSON-LD**: Structured data for search engine optimization
+- **Google Analytics**: Privacy-focused analytics with consent management
 
-**License**
+## 📁 Project Structure
 
-- The repository uses the MIT License (`LICENSE` file). Check and update author/copyright lines if required.
+### Root Files
 
-**Recommended Next Steps**
+### Root Files
 
-- Decide how you want to deploy on Vercel: move site files into `public/` or update `vercel.json`.
-- Add `manifest.json` if you plan to use PWA features (or remove the link if not needed).
-- Double-check image references (some pages reference `favicon.png` or `/assets/videos/` fallbacks that may not exist).
-- If you want to make the recipes data-driven, consider converting the `recipes/` pages to a small static generator or a JSON-driven client-side renderer.
+```
+├── index.html              # Home page with hero, featured recipes, and search
+├── about.html              # About page with mission and team information
+├── contact.html            # Contact form (demo with client-side handling)
+├── thank-you.html          # Contact form confirmation page
+├── manifest.json           # PWA manifest for app-like experience
+├── robots.txt              # Search engine crawler directives
+├── sitemap.xml             # XML sitemap for SEO
+├── vercel.json             # Vercel deployment configuration
+└── LICENSE                 # MIT License
+```
+
+### HTML Pages
+
+### HTML Pages
+
+- **`index.html`**: Landing page featuring hero section, recipe highlights, search functionality, and video modal
+- **`about.html`**: Mission statement, platform features, and team member profiles
+- **`contact.html`**: Contact form with client-side validation (ready for Formspree or serverless backend integration)
+- **`thank-you.html`**: Confirmation page after form submission
+
+### Recipes Directory (`recipes/`)
+
+```
+recipes/
+├── index.html              # Recipe listing with search, filters, and pagination
+├── african-jollof.html     # Jollof rice recipe with video tutorial
+├── peanut-stew.html        # West African peanut stew recipe
+└── plantain-fritters.html  # Plantain fritters (Kelewele) recipe
+```
+
+Each recipe page includes:
+- JSON-LD structured data for rich search results
+- Embedded YouTube video tutorial
+- Ingredient lists with measurements
+- Step-by-step instructions
+- Cooking tips and variations
+- Navigation back to recipe index
+
+### Assets Directory (`assets/`)
+
+```
+assets/
+├── css/
+│   └── styles.css          # Main stylesheet (~1000+ lines of production CSS)
+├── js/
+│   ├── main.js             # Core functionality (theme, nav, search, modal)
+│   ├── i18n.js             # Internationalization system
+│   └── cookie-consent.js   # GDPR-compliant cookie consent manager
+├── i18n/
+│   ├── en.json             # English translations
+│   ├── fr.json             # French translations
+│   └── pl.json             # Polish translations
+├── icons/
+│   ├── volcano.svg         # Site favicon (SVG)
+│   ├── volcano-32.png      # 32x32 favicon
+│   └── volcano-192.png     # 192x192 app icon
+└── images/
+    ├── team/               # Team member photos
+    └── *.png               # Recipe thumbnails and hero images
+```
+
+## ✨ Key Features in Detail
+
+### 🎨 Theming System
+
+- Dark and light mode with smooth transitions
+- User preference stored in `localStorage`
+- System preference detection via `prefers-color-scheme`
+- CSS custom properties for easy theme customization
+- Theme toggle button in navigation
+
+### 🌐 Internationalization (i18n)
+
+The site supports three languages with dynamic content switching:
+
+- **Polish (pl)**: Default language
+- **English (en)**: Full translation
+- **French (fr)**: Full translation
+
+Translation files are loaded dynamically and content is replaced on-the-fly without page reload. The language selector persists user choice in `localStorage`.
+
+### 🔍 Search & Filter
+
+- **Real-time search**: Debounced search with instant results
+- **Tag filtering**: Filter recipes by cuisine type, dish category, or dietary preferences
+- **Client-side pagination**: Browse recipes without full page loads
+- **Responsive search UI**: Works seamlessly on all device sizes
+
+### 📹 Video Integration
+
+- YouTube video embeds with lazy loading
+- Custom video modal with keyboard navigation
+- Fallback for video playback errors
+- Accessible video controls
+
+### 📧 Contact Form
+
+The contact form includes:
+- Client-side validation
+- Success/error messaging
+- Demo submission flow (simulated)
+- Ready for integration with:
+  - Formspree
+  - Vercel serverless functions
+  - Third-party form services
+
+### 🍪 Cookie Consent
+
+GDPR-compliant cookie consent manager:
+- Initial consent banner
+- Granular consent options (analytics, marketing)
+- Google Analytics integration with consent mode
+- Preference storage and recall
+
+## 🚀 Deployment
+
+### Vercel Configuration
+
+The site is configured for Vercel deployment via `vercel.json`:
+
+```json
+{
+  "builds": [{
+    "src": "public/**",
+    "use": "@vercel/static"
+  }]
+}
+```
+
+**Note**: The current configuration serves files from the `public/` directory. You have two options:
+
+1. **Move files to `public/`**: Copy all HTML files and assets into `public/` directory
+2. **Update `vercel.json`**: Change configuration to serve from repository root
+
+### Deployment Steps
+
+1. Connect repository to Vercel
+2. Configure build settings (none required for static site)
+3. Set environment variables (if using form backend)
+4. Deploy!
+
+The site will be automatically deployed on every push to the main branch.
+
+## 📊 SEO & Analytics
+
+### Search Engine Optimization
+
+- **Meta tags**: Comprehensive Open Graph and Twitter Card tags
+- **Structured data**: JSON-LD for Organization, WebSite, and Recipe schemas
+- **Sitemap**: XML sitemap at `/sitemap.xml`
+- **Robots.txt**: Proper crawler directives
+- **Canonical URLs**: Prevent duplicate content issues
+- **Hreflang tags**: Multi-language SEO support
+- **Semantic HTML**: Proper heading hierarchy and landmarks
+
+### Analytics
+
+- **Google Analytics 4**: Configured with tag ID `G-20L5TV2NMP`
+- **Consent Management**: Respects user privacy choices
+- **Vercel Web Analytics**: Built-in performance monitoring
+- **Custom events**: Track recipe views, video plays, form submissions
+
+## ♿ Accessibility
+
+The site follows WCAG 2.1 guidelines:
+
+- **Semantic HTML**: Proper use of headings, landmarks, and ARIA attributes
+- **Keyboard Navigation**: All interactive elements accessible via keyboard
+- **Skip Links**: Jump to main content for screen reader users
+- **Focus Management**: Visible focus indicators and logical tab order
+- **Alt Text**: All images include descriptive alternative text
+- **Color Contrast**: Meets WCAG AA standards for text readability
+- **Reduced Motion**: Respects `prefers-reduced-motion` preference
+- **Screen Reader Support**: ARIA labels and live regions where appropriate
+
+## 🔧 Development
+
+### Prerequisites
+
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Local web server (optional but recommended)
+- Text editor or IDE
+
+### Local Development
+
+Since this is a static site, you can simply open `index.html` in a browser. However, for the best experience (especially for features like i18n), use a local server:
+
+**Option 1: Python**
+```bash
+python -m http.server 8000
+```
+
+**Option 2: Node.js (http-server)**
+```bash
+npx http-server -p 8000
+```
+
+**Option 3: VS Code Live Server**
+Install the Live Server extension and click "Go Live"
+
+Then navigate to `http://localhost:8000`
+
+### File Organization
+
+The site follows a simple, flat structure:
+- Top-level pages in root directory
+- Recipes in `/recipes/`
+- All assets in `/assets/`
+- No build process or compilation needed
+
+### Adding New Recipes
+
+1. Create a new HTML file in `/recipes/` (e.g., `new-recipe.html`)
+2. Copy the structure from an existing recipe page
+3. Update the recipe content, ingredients, and instructions
+4. Add recipe thumbnail to `/assets/images/`
+5. Include JSON-LD structured data
+6. Embed YouTube video tutorial
+7. Add recipe card to `/recipes/index.html`
+8. Update sitemap.xml with new recipe URL
+
+## 🗺️ Roadmap
+
+Future enhancements planned:
+
+- [ ] User accounts and saved recipes
+- [ ] Recipe ratings and reviews
+- [ ] Print-friendly recipe cards
+- [ ] Ingredient shopping lists
+- [ ] Cooking timer integration
+- [ ] Recipe submission from community
+- [ ] Newsletter subscription
+- [ ] Social media sharing buttons
+- [ ] Recipe collections/categories
+- [ ] Advanced search filters (cooking time, difficulty, dietary restrictions)
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Team
+
+Meet the team behind Wulkan Kibo on our [About page](about.html).
+
+## 📬 Contact
+
+Have questions, recipe suggestions, or feedback? Visit our [Contact page](contact.html) or reach out to us on [YouTube](https://www.youtube.com/@wulkankibo).
+
+## 🙏 Contributing
+
+We welcome contributions! Whether it's:
+- New recipe submissions
+- Translation improvements
+- Bug fixes
+- Feature suggestions
+- Documentation updates
+
+Please feel free to open an issue or submit a pull request.
 
 ---
 
-If you'd like, I can now:
-- Move the top-level HTML files into `public/` and update internal paths so the current `vercel.json` works as-is, or
-- Update `vercel.json` to serve root files instead of `public/**`, or
-- Generate a more concise site map or missing `manifest.json` for you.
-
-Tell me which of the next steps you'd like me to run and I'll proceed.
-
-**Repository File Tree**
-
-```
-wulkan-kibo/
-├─ about.html
-├─ contact.html
-├─ index.html
-├─ LICENSE
-├─ README.md
-├─ robots.txt
-├─ sitemap.xml
-├─ vercel.json
-├─ assets/
-│  ├─ css/
-│  │  └─ styles.css
-│  ├─ icons/
-│  │  ├─ favicon.svg
-│  │  ├─ volcano.svg
-│  │  └─ README.md
-│  ├─ images/
-│  │  ├─ hero.png
-│  │  ├─ jollof-thumb.png
-│  │  ├─ jollof-thumb-2.png
-│  │  ├─ peanut-thumb.png
-│  │  ├─ peanut-thumb-2.png
-│  │  ├─ plantain-thumb.png
-│  │  └─ team/
-│  │     ├─ iga.png
-│  │     ├─ ignacy.png
-│  │     ├─ nina.png
-│  │     └─ roman.png
-│  └─ js/
-│     └─ main.js
-└─ recipes/
-	├─ index.html
-	├─ african-jollof.html
-	├─ peanut-stew.html
-	└─ plantain-fritters.html
-
-```
-
-Note: The tree above reflects the repository layout as-of this inspection and flags the `manifest.json` reference that appears to be missing. If you want exact byte-for-byte verification or a generated tree file (`TREE.md`), I can create that next.
-
+**Made with ❤️ for African cuisine enthusiasts worldwide**
