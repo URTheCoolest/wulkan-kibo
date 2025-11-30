@@ -15,7 +15,11 @@
   }
 
   async function loadTranslations(lang){
-    const res = await fetch(`/assets/i18n/${lang}.json`);
+    // Determine correct path based on current location
+    const basePath = window.location.pathname.includes('/recipes/')
+      ? '../assets/i18n/'
+      : '/assets/i18n/';
+    const res = await fetch(`${basePath}${lang}.json`);
     if (!res.ok) throw new Error('Failed to load translations: ' + lang);
     return res.json();
   }

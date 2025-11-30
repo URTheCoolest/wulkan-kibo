@@ -286,11 +286,22 @@ a:hover {
   height: 100%;
 }
 
-.nav-left,
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex: 1;
+}
+
 .nav-right {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+}
+
+.nav-menu {
+  margin-left: auto;
+  margin-right: var(--spacing-xl);
 }
 
 .logo {
@@ -299,6 +310,7 @@ a:hover {
   color: var(--color-primary);
   text-decoration: none;
   padding: var(--spacing-sm) 0;
+  white-space: nowrap;
 }
 
 .logo:hover {
@@ -379,17 +391,25 @@ a:hover {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
+  :root {
+    --header-height: 60px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
   .nav-toggle {
     display: block;
   }
 
   .nav-right {
-    gap: var(--spacing-lg);
+    gap: var(--spacing-sm);
   }
 
   .nav-toggle {
-    padding: var(--spacing-md) var(--spacing-sm);
-    margin-right: calc(-1 * var(--spacing-sm));
+    padding: var(--spacing-sm);
+    margin-right: calc(-1 * var(--spacing-xs));
   }
 
   .hamburger {
