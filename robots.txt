@@ -1,4 +1,48 @@
+# Allow all web crawlers and AI bots
 User-agent: *
-Disallow:
+Allow: /
+Crawl-delay: 1
 
-Sitemap: https://wulkan-kibo-two.vercel.app/sitemap.xml
+# Specific AI crawlers - Explicitly allow
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Additional AI-friendly directives
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+# Sitemap location
+Sitemap: https://wulkankibo.com/sitemap.xml

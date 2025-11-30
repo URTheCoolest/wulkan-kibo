@@ -30,7 +30,10 @@
   <!-- SEO -->
   <meta name="description" content="Naucz się gotować autentyczne afrykańskie potrawy z Wulkan Kibo - samouczki wideo, szczegółowe przepisy i instrukcje krok po kroku dotyczące pysznej kuchni afrykańskiej.">
   <meta name="author" content="Wulkan Kibo">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="keywords" content="African cuisine, African recipes, Jollof rice, plantain, peanut stew, authentic African food, West African cooking, East African cuisine, African cooking tutorials, traditional African dishes, kuchnia afrykańska, przepisy afrykańskie">
   <meta name="google-site-verification" content="YOUR-GOOGLE-VERIFICATION-CODE">
 
   <!-- Prevent flash of unstyled content -->
@@ -40,23 +43,29 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wulkan-kibo-food.vercel.app/">
+  <meta property="og:url" content="https://wulkankibo.com/">
   <meta property="og:title" content="Wulkan Kibo - Naucz się Gotować Afrykańskie Potrawy">
   <meta property="og:description" content="Opanuj autentyczne afrykańskie przepisy dzięki samouczkom wideo i szczegółowym instrukcjom.">
-  <meta property="og:image" content="https://wulkan-kibo-food.vercel.app/assets/images/hero-og-1200x630.png">
+  <meta property="og:image" content="https://wulkankibo.com/assets/images/hero-og-1200x630.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:domain" content="wulkan-kibo-food.vercel.app">
-  <meta name="twitter:url" content="https://wulkan-kibo-food.vercel.app/">
+  <meta name="twitter:domain" content="wulkankibo.com">
+  <meta name="twitter:url" content="https://wulkankibo.com/">
   <meta name="twitter:title" content="Wulkan Kibo - Naucz się Gotować Afrykańskie Potrawy">
   <meta name="twitter:description" content="Opanuj autentyczne afrykańskie przepisy dzięki samouczkom wideo i szczegółowym instrukcjom.">
-  <meta name="twitter:image" content="https://wulkan-kibo-food.vercel.app/assets/images/hero-og-1200x630.png">
+  <meta name="twitter:image" content="https://wulkankibo.com/assets/images/hero-og-1200x630.png">
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://wulkan-kibo-food.vercel.app/">
+  <link rel="canonical" href="https://wulkankibo.com/">
+  
+  <!-- Hreflang for multi-language support -->
+  <link rel="alternate" hreflang="pl" href="https://wulkankibo.com/">
+  <link rel="alternate" hreflang="en" href="https://wulkankibo.com/">
+  <link rel="alternate" hreflang="fr" href="https://wulkankibo.com/">
+  <link rel="alternate" hreflang="x-default" href="https://wulkankibo.com/">
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="assets/icons/volcano.svg">
@@ -74,6 +83,46 @@
     <link rel="manifest" href="manifest.json">
 
   <title>Wulkan Kibo - Naucz się Gotować Afrykańskie Potrawy z Przepisami Wideo</title>
+  
+  <!-- Structured Data for AI & Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Wulkan Kibo",
+    "description": "Platform to learn authentic African cooking through video tutorials and detailed recipes",
+    "url": "https://wulkankibo.com/",
+    "logo": "https://wulkankibo.com/assets/icons/volcano-192.png",
+    "sameAs": [
+      "https://www.youtube.com/@wulkankibo"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "url": "https://wulkankibo.com/contact.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Wulkan Kibo",
+    "description": "Learn to cook authentic African dishes with video tutorials, detailed recipes and step-by-step instructions for delicious African cuisine",
+    "url": "https://wulkankibo.com/",
+    "inLanguage": ["pl", "en", "fr"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://wulkankibo.com/recipes/?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "African Cuisine",
+      "description": "Traditional and authentic African cooking recipes and techniques"
+    }
+  }
+  </script>
   
   <!-- Vercel Web Analytics -->
   <script>
