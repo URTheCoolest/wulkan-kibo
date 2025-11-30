@@ -185,27 +185,31 @@
     
     <header class="header">
         <div class="container">
-            <nav class="nav" role="navigation" aria-label="Główna nawigacja">
-                <a href="../index.html" class="logo">🌋 Wulkan Kibo</a>
-                <button class="nav-toggle" aria-label="Przełącz menu nawigacji" aria-expanded="false">
-                    <span class="hamburger"></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="../index.html" data-i18n="site.nav.home">Strona główna</a></li>
-                    <li><a href="index.html" class="active" data-i18n="site.nav.recipes">Przepisy</a></li>
-                    <li><a href="../about.html" data-i18n="site.nav.about">O nas</a></li>
-                    <li><a href="../contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
-                </ul>
-                                <label for="lang-select" class="sr-only" data-i18n="site.lang.label">Język</label>
-                                <select id="lang-select" aria-label="Wybierz język">
-                                    <option value="pl" data-i18n="site.lang.pl">Polski</option>
-                                    <option value="en" data-i18n="site.lang.en">Angielski</option>
-                                    <option value="fr" data-i18n="site.lang.fr">Francuski</option>
-                                </select>
-                                <button class="theme-toggle" aria-label="Przełącz tryb ciemny">
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 12a1 1 0 001 1h2a1 1 0 000-2H3a1 1 0 00-1 1zm17 0a1 1 0 001 1h2a1 1 0 000-2h-2a1 1 0 00-1 1zm-8-7a1 1 0 011-1V3a1 1 0 00-2 0v2a1 1 0 011 1zM12 19a1 1 0 01-1 1v2a1 1 0 002 0v-2a1 1 0 01-1-1zM5.99 7.401a1 1 0 001.414-1.414L5.697 4.28A1 1 0 004.283 5.697l1.707 1.704zm12.02 9.197a1 1 0 00-1.414 1.414l1.707 1.707a1 1 0 001.414-1.414l-1.707-1.707zM4.283 18.303a1 1 0 001.414 1.414l1.707-1.707a1 1 0 00-1.414-1.414l-1.707 1.707zm13.434-13.02a1 1 0 001.414-1.414L17.424 2.16a1 1 0 00-1.414 1.414l1.707 1.707z"/></svg>
-                </button>
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <div class="nav-left">
+                    <a href="../index.html" class="logo">🌋 Wulkan Kibo</a>
+                    <ul class="nav-menu">
+                        <li><a href="../index.html" data-i18n="site.nav.home">Strona główna</a></li>
+                        <li><a href="index.html" class="active" data-i18n="site.nav.recipes">Przepisy</a></li>
+                        <li><a href="../about.html" data-i18n="site.nav.about">O nas</a></li>
+                        <li><a href="../contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <label for="lang-select" class="sr-only" data-i18n="site.lang.label">Język</label>
+                    <select id="lang-select" aria-label="Wybierz język">
+                        <option value="pl" data-i18n="site.lang.pl">Polski</option>
+                        <option value="en" data-i18n="site.lang.en">Angielski</option>
+                        <option value="fr" data-i18n="site.lang.fr">Francuski</option>
+                    </select>
+                    <button class="theme-toggle" aria-label="Przełącz tryb ciemny">
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 12a1 1 0 001 1h2a1 1 0 000-2H3a1 1 0 00-1 1zm17 0a1 1 0 001 1h2a1 1 0 000-2h-2a1 1 0 00-1 1zm-8-7a1 1 0 011-1V3a1 1 0 00-2 0v2a1 1 0 011 1zM12 19a1 1 0 01-1 1v2a1 1 0 002 0v-2a1 1 0 01-1-1zM5.99 7.401a1 1 0 001.414-1.414L5.697 4.28A1 1 0 004.283 5.697l1.707 1.704zm12.02 9.197a1 1 0 00-1.414 1.414l1.707 1.707a1 1 0 001.414-1.414l-1.707-1.707zM4.283 18.303a1 1 0 001.414 1.414l1.707-1.707a1 1 0 00-1.414-1.414l-1.707 1.707zm13.434-13.02a1 1 0 001.414-1.414L17.424 2.16a1 1 0 00-1.414 1.414l1.707 1.707z"/></svg>
+                    </button>
+                    <button class="nav-toggle" aria-label="Przełącz menu nawigacji" aria-expanded="false">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>

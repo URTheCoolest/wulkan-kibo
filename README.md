@@ -39,11 +39,6 @@ Each recipe includes:
 **Type**: Static HTML website (hand-authored pages, CSS and JavaScript)  
 **Deployment**: Configured for Vercel with static site deployment
 
-## 🛠️ Technical Overview
-
-**Type**: Static HTML website (hand-authored pages, CSS and JavaScript)  
-**Deployment**: Configured for Vercel with static site deployment
-
 ### Architecture
 
 The website is built as a modern static site with no build step required:
