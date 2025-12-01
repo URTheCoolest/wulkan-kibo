@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Cookie Consent - Wulkan Kibo</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="Test Cookie Consent - Wulkan Kibo">
+    <meta name="author" content="Wulkan Kibo">
+    <meta name="robots" content="noindex, follow">
+        <script src="/assets/js/head-basic.js"></script>
     
-    <!-- Cookie Consent -->
-    <script src="assets/js/cookie-consent.js"></script>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/volcano.svg">
+    <link rel="icon" href="assets/icons/volcano-32.png">
+    <link rel="apple-touch-icon" href="assets/icons/volcano-192.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <title>Test Cookie Consent - Wulkan Kibo</title>
     
     <style>
-        body {
-            padding: 40px;
-            font-family: 'Inter', sans-serif;
-        }
         .test-container {
             max-width: 800px;
-            margin: 0 auto;
+            margin: 2rem auto;
             background: var(--color-bg-alt);
             padding: 2rem;
             border-radius: 12px;
             border: 1px solid var(--color-border);
         }
-        h1 {
+        .test-container h1 {
             color: var(--color-primary);
+            margin-top: 0;
         }
         .test-button {
             background: var(--color-primary);
@@ -35,6 +41,7 @@
             font-weight: 600;
             cursor: pointer;
             margin-top: 20px;
+            margin-right: 10px;
         }
         .test-button:hover {
             background: var(--color-primary-dark);
@@ -42,9 +49,23 @@
         .info {
             background: var(--color-info-bg);
             color: var(--color-info-text);
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 8px;
             margin: 1rem 0;
+        }
+        .info strong {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        .info ul {
+            margin: 0;
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+        .info li {
+            margin: 0.5rem 0;
+            line-height: 1.5;
         }
         .status {
             margin-top: 20px;
@@ -52,19 +73,149 @@
             border-radius: 8px;
             background: var(--color-bg);
         }
+        .analytics-section {
+            background: var(--color-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border: 1px solid var(--color-border);
+        }
+        .analytics-section h2 {
+            color: var(--color-primary);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .analytics-section h3 {
+            color: var(--color-text);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        .analytics-section p {
+            line-height: 1.6;
+            margin: 0.75rem 0;
+            color: var(--color-text-light);
+        }
+        .analytics-section ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+        .analytics-section li {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+            color: var(--color-text-light);
+        }
+        .analytics-section strong {
+            color: var(--color-text);
+        }
+        .analytics-badge {
+            display: inline-block;
+            background: var(--color-primary);
+            color: var(--color-bg-alt);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
     </style>
 </head>
 <body>
-    <div class="test-container">
-        <h1>🍪 Cookie Consent Test Page</h1>
+    <a href="#main-content" class="sr-only sr-only-focusable">Przejdź do głównej treści</a>
+    
+    <header class="header">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <div class="nav-left">
+                    <a href="index.html" class="logo">🌋 Wulkan Kibo</a>
+                    <ul class="nav-menu">
+                        <li><a href="index.html" data-i18n="site.nav.home">Strona główna</a></li>
+                        <li><a href="recipes/index.html" data-i18n="site.nav.recipes">Przepisy</a></li>
+                        <li><a href="about.html" data-i18n="site.nav.about">O nas</a></li>
+                        <li><a href="contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <label for="lang-select" class="sr-only" data-i18n="site.lang.label">Język</label>
+                    <select id="lang-select" aria-label="Wybierz język">
+                      <option value="pl" data-i18n="site.lang.pl">Polski</option>
+                      <option value="en" data-i18n="site.lang.en">Angielski</option>
+                      <option value="fr" data-i18n="site.lang.fr">Francuski</option>
+                    </select>
+                    <button class="theme-toggle" aria-label="Przełącz tryb ciemny">
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 12a1 1 0 001 1h2a1 1 0 000-2H3a1 1 0 00-1 1zm17 0a1 1 0 001 1h2a1 1 0 000-2h-2a1 1 0 00-1 1zm-8-7a1 1 0 011-1V3a1 1 0 00-2 0v2a1 1 0 011 1zM12 19a1 1 0 01-1 1v2a1 1 0 002 0v-2a1 1 0 01-1-1zM5.99 7.401a1 1 0 001.414-1.414L5.697 4.28A1 1 0 004.283 5.697l1.707 1.704zm12.02 9.197a1 1 0 00-1.414 1.414l1.707 1.707a1 1 0 001.414-1.414l-1.707-1.707zM4.283 18.303a1 1 0 001.414 1.414l1.707-1.707a1 1 0 00-1.414-1.414l-1.707 1.707zm13.434-13.02a1 1 0 001.414-1.414L17.424 2.16a1 1 0 00-1.414 1.414l1.707 1.707z"/></svg>
+                    </button>
+                    <button class="nav-toggle" aria-label="Przełącz menu nawigacji" aria-expanded="false">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="main-content" class="main">
+        <div class="container">
+            <div class="test-container">
+        <h1 data-i18n="cookie.title">🍪 Cookie Consent Test Page</h1>
         
         <div class="info">
-            <strong>ℹ️ Instructions:</strong>
+            <strong data-i18n="cookie.instructionsTitle">ℹ️ Instructions:</strong>
             <ul>
-                <li>If this is your first visit, the cookie modal should appear automatically</li>
-                <li>Once you accept or reject, it won't appear again (stored in localStorage)</li>
-                <li>To test again, click the "Reset Cookie Consent" button below</li>
+                <li data-i18n="cookie.instructions.0">If this is your first visit, the cookie modal should appear automatically</li>
+                <li data-i18n="cookie.instructions.1">Once you accept or reject, it won't appear again (stored in localStorage)</li>
+                <li data-i18n="cookie.instructions.2">To test again, click the "Reset Cookie Consent" button below</li>
             </ul>
+        </div>
+
+        <div class="analytics-section">
+            <h2 data-i18n="cookie.analytics.title">📊 Analytics & Privacy Information</h2>
+            
+            <p data-i18n-html="cookie.analytics.intro">Wulkan Kibo uses analytics tools to improve user experience and understand how visitors interact with our content. We take your privacy seriously and only collect analytics data with your consent.</p>
+            
+            <h3 data-i18n-html="cookie.analytics.gaTitle"><span class="analytics-badge">Google Analytics</span> What We Track</h3>
+            <p data-i18n-html="cookie.analytics.gaIntro">When you consent to analytics, we use <strong>Google Analytics 4 (GA4)</strong> to collect anonymized data about:</p>
+            <ul>
+                <li data-i18n-html="cookie.analytics.gaItems.0"><strong>Page Views:</strong> Which recipes and pages are most popular</li>
+                <li data-i18n-html="cookie.analytics.gaItems.1"><strong>User Behavior:</strong> How visitors navigate through the site (e.g., from homepage to recipe pages)</li>
+                <li data-i18n-html="cookie.analytics.gaItems.2"><strong>Traffic Sources:</strong> Where visitors come from (search engines, social media, direct visits)</li>
+                <li data-i18n-html="cookie.analytics.gaItems.3"><strong>Device Information:</strong> Browser type, operating system, and screen size (for responsive design improvements)</li>
+                <li data-i18n-html="cookie.analytics.gaItems.4"><strong>Geographic Data:</strong> Country and city-level location (not precise location)</li>
+                <li data-i18n-html="cookie.analytics.gaItems.5"><strong>Engagement Metrics:</strong> Time spent on pages, scroll depth, video views</li>
+            </ul>
+            
+            <h3 data-i18n-html="cookie.analytics.vercelTitle"><span class="analytics-badge">Vercel Analytics</span> Performance Monitoring</h3>
+            <p data-i18n-html="cookie.analytics.vercelIntro">We also use <strong>Vercel Web Analytics</strong> for privacy-friendly performance insights:</p>
+            <ul>
+                <li data-i18n-html="cookie.analytics.vercelItems.0"><strong>Page Load Times:</strong> How quickly pages load for visitors</li>
+                <li data-i18n-html="cookie.analytics.vercelItems.1"><strong>Core Web Vitals:</strong> Performance metrics (LCP, FID, CLS) to ensure fast, smooth experiences</li>
+                <li data-i18n-html="cookie.analytics.vercelItems.2"><strong>Traffic Patterns:</strong> Peak usage times and popular content</li>
+                <li data-i18n-html="cookie.analytics.vercelItems.3"><strong>No Personal Data:</strong> Vercel Analytics doesn't use cookies and doesn't track personal information</li>
+            </ul>
+            
+            <h3 data-i18n="cookie.analytics.whyTitle">🔒 Why This Matters</h3>
+            <p data-i18n="cookie.analytics.whyIntro">Analytics help us:</p>
+            <ul>
+                <li data-i18n-html="cookie.analytics.whyItems.0"><strong>Create Better Content:</strong> Understand which recipes are most loved so we can create more like them</li>
+                <li data-i18n-html="cookie.analytics.whyItems.1"><strong>Improve Site Performance:</strong> Identify slow pages and optimize loading times</li>
+                <li data-i18n-html="cookie.analytics.whyItems.2"><strong>Fix Issues:</strong> Detect broken links or navigation problems</li>
+                <li data-i18n-html="cookie.analytics.whyItems.3"><strong>Optimize for Mobile:</strong> Ensure great experience across all devices</li>
+                <li data-i18n-html="cookie.analytics.whyItems.4"><strong>Plan Future Content:</strong> Know what African cuisine topics interest you most</li>
+            </ul>
+            
+            <h3 data-i18n="cookie.analytics.privacyTitle">🛡️ Your Privacy Rights</h3>
+            <p data-i18n="cookie.analytics.privacyIntro">You are in full control:</p>
+            <ul>
+                <li data-i18n-html="cookie.analytics.privacyItems.0"><strong>Opt-Out Anytime:</strong> You can reject cookies or revoke consent at any time</li>
+                <li data-i18n-html="cookie.analytics.privacyItems.1"><strong>No Personal Identification:</strong> We never collect names, emails, or personally identifiable information through analytics</li>
+                <li data-i18n-html="cookie.analytics.privacyItems.2"><strong>IP Anonymization:</strong> Google Analytics is configured to anonymize IP addresses</li>
+                <li data-i18n-html="cookie.analytics.privacyItems.3"><strong>GDPR Compliant:</strong> Our consent system follows EU privacy regulations</li>
+                <li data-i18n-html="cookie.analytics.privacyItems.4"><strong>Data Retention:</strong> Analytics data is automatically deleted after 14 months</li>
+            </ul>
+            
+            <p data-i18n-html="cookie.analytics.note"><strong>Note:</strong> Rejecting analytics cookies will not affect your ability to use the website. All recipes, videos, and content remain fully accessible.</p>
         </div>
 
         <div class="status">
@@ -79,39 +230,41 @@
         <button class="test-button" onclick="checkStatus()">
             ✓ Check Current Status
         </button>
-    </div>
+            </div>
+        </div>
+    </main>
 
-    <script>
-        function checkStatus() {
-            const consent = localStorage.getItem('wulkan_kibo_consent');
-            const version = localStorage.getItem('wulkan_kibo_consent_version');
-            const statusEl = document.getElementById('consent-status');
-            
-            if (consent) {
-                statusEl.innerHTML = `
-                    <strong>Consent:</strong> ${consent}<br>
-                    <strong>Version:</strong> ${version || 'N/A'}<br>
-                    <strong>Status:</strong> ✅ Stored in localStorage
-                `;
-            } else {
-                statusEl.innerHTML = `
-                    <strong>Status:</strong> ❌ No consent stored (modal should show)
-                `;
-            }
-        }
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-i18n="site.footer.title">Wulkan Kibo</h3>
+                    <p data-i18n="site.footer.tagline">Przynosimy afrykańskie smaki do Twojej kuchni</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="site.footer.quickLinks">Szybkie Linki</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="site.nav.home">Strona główna</a></li>
+                        <li><a href="recipes/index.html" data-i18n="site.nav.recipes">Przepisy</a></li>
+                        <li><a href="about.html" data-i18n="site.nav.about">O nas</a></li>
+                        <li><a href="contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
+                        <li><a href="TEST-COOKIE-CONSENT.html">Cookie Consent Test</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="site.footer.contactTitle">Kontakt</h4>
+                    <p data-i18n="site.footer.shareTag">Udostępnij swoje kreacje z #WulkanKibo</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="site.footer.copyright">&copy; 2024 Wulkan Kibo. Licencja MIT.</p>
+            </div>
+        </div>
+    </footer>
 
-        function resetAndReload() {
-            if (typeof window.resetCookieConsent === 'function') {
-                window.resetCookieConsent();
-            } else {
-                localStorage.removeItem('wulkan_kibo_consent');
-                localStorage.removeItem('wulkan_kibo_consent_version');
-                location.reload();
-            }
-        }
-
-        // Check status on load
-        checkStatus();
-    </script>
+    <script src="/assets/js/i18n.js" defer></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script src="/assets/js/cookie-consent.js" defer></script>
+    <script src="/assets/js/test-cookie-consent-page.js" defer></script>
 </body>
 </html>

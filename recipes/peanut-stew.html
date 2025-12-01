@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){ dataLayer.push(arguments); }
-
-            // Set default consent to denied
-            gtag('consent', 'default', {
-              'analytics_storage': 'denied',
-              'ad_storage': 'denied',
-              'ad_user_data': 'denied',
-              'ad_personalization': 'denied'
-            });
-        </script>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-20L5TV2NMP"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-20L5TV2NMP');
-        </script>
+                <script src="/assets/js/head-common.js"></script>
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-20L5TV2NMP"></script>
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Przepis na kremowy zachodnioafrykański gulasz orzechowy ze słodkimi ziemniakami i szpinakiem. Wegetariański, sycacy i pełen smaku z samouczkiem wideo.">
@@ -366,6 +348,7 @@
                         <li><a href="index.html" data-i18n="site.nav.recipes">Przepisy</a></li>
                         <li><a href="../about.html" data-i18n="site.nav.about">O nas</a></li>
                         <li><a href="../contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
+                        <li><a href="../TEST-COOKIE-CONSENT.html">Cookie Consent Test</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -378,9 +361,8 @@
             </div>
         </div>
     </footer>
-        <script src="/assets/js/i18n.js"></script>
-    
+        <script src="/assets/js/i18n.js" defer></script>
     <script type="module" src="/assets/js/main.js"></script>
-    <script src="../assets/js/cookie-consent.js"></script>
+    <script src="/assets/js/cookie-consent.js" defer></script>
 </body>
-</html>v
+</html>

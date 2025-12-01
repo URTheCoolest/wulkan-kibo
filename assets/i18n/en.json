@@ -262,4 +262,55 @@
     "plantainTip4": "Serving suggestions: Kelewele is traditionally served as a snack with peanuts or as a side dish to grilled fish or chicken. Also great for breakfast!",
     "plantainTip5": "Storage: Best enjoyed fresh, but leftovers can be stored in the refrigerator for 2 days and reheated in the oven at 175°C for 10 minutes to restore crispiness."
   }
+  ,
+  "cookie": {
+    "title": "🍪 Cookie Consent Test Page",
+    "instructionsTitle": "ℹ️ Instructions:",
+    "instructions": [
+      "If this is your first visit, the cookie modal should appear automatically",
+      "Once you accept or reject, it won't appear again (stored in localStorage)",
+      "To test again, click the \"Reset Cookie Consent\" button below"
+    ],
+    "analytics": {
+      "title": "📊 Analytics & Privacy Information",
+      "intro": "Wulkan Kibo uses analytics tools to improve user experience and understand how visitors interact with our content. We take your privacy seriously and only collect analytics data with your consent.",
+      "gaTitle": "<span class=\"analytics-badge\">Google Analytics</span> What We Track",
+      "gaIntro": "When you consent to analytics, we use <strong>Google Analytics 4 (GA4)</strong> to collect anonymized data about:",
+      "gaItems": [
+        "<strong>Page Views:</strong> Which recipes and pages are most popular",
+        "<strong>User Behavior:</strong> How visitors navigate through the site (e.g., from homepage to recipe pages)",
+        "<strong>Traffic Sources:</strong> Where visitors come from (search engines, social media, direct visits)",
+        "<strong>Device Information:</strong> Browser type, operating system, and screen size (for responsive design improvements)",
+        "<strong>Geographic Data:</strong> Country and city-level location (not precise location)",
+        "<strong>Engagement Metrics:</strong> Time spent on pages, scroll depth, video views"
+      ],
+      "vercelTitle": "<span class=\"analytics-badge\">Vercel Analytics</span> Performance Monitoring",
+      "vercelIntro": "We also use <strong>Vercel Web Analytics</strong> for privacy-friendly performance insights:",
+      "vercelItems": [
+        "<strong>Page Load Times:</strong> How quickly pages load for visitors",
+        "<strong>Core Web Vitals:</strong> Performance metrics (LCP, FID, CLS) to ensure fast, smooth experiences",
+        "<strong>Traffic Patterns:</strong> Peak usage times and popular content",
+        "<strong>No Personal Data:</strong> Vercel Analytics doesn't use cookies and doesn't track personal information"
+      ],
+      "whyTitle": "🔒 Why This Matters",
+      "whyIntro": "Analytics help us:",
+      "whyItems": [
+        "<strong>Create Better Content:</strong> Understand which recipes are most loved so we can create more like them",
+        "<strong>Improve Site Performance:</strong> Identify slow pages and optimize loading times",
+        "<strong>Fix Issues:</strong> Detect broken links or navigation problems",
+        "<strong>Optimize for Mobile:</strong> Ensure great experience across all devices",
+        "<strong>Plan Future Content:</strong> Know what African cuisine topics interest you most"
+      ],
+      "privacyTitle": "🛡️ Your Privacy Rights",
+      "privacyIntro": "You are in full control:",
+      "privacyItems": [
+        "<strong>Opt-Out Anytime:</strong> You can reject cookies or revoke consent at any time",
+        "<strong>No Personal Identification:</strong> We never collect names, emails, or personally identifiable information through analytics",
+        "<strong>IP Anonymization:</strong> Google Analytics is configured to anonymize IP addresses",
+        "<strong>GDPR Compliant:</strong> Our consent system follows EU privacy regulations",
+        "<strong>Data Retention:</strong> Analytics data is automatically deleted after 14 months"
+      ],
+      "note": "<strong>Note:</strong> Rejecting analytics cookies will not affect your ability to use the website. All recipes, videos, and content remain fully accessible."
+    }
+  }
 }

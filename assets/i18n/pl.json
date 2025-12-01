@@ -262,4 +262,55 @@
     "plantainTip4": "Propozycje podania: Kelewele jest tradycyjnie podawane jako przekąska z orzechami lub jako dodatek do grillowanej ryby lub kurczaka. Świetne również na śniadanie!",
     "plantainTip5": "Przechowywanie: Najlepiej cieszyć się świeżo, ale resztki można przechowywać w lodówce przez 2 dni i podgrzewać w piekarniku w 175°C przez 10 minut, aby przywrócić chrupkość."
   }
+  ,
+  "cookie": {
+    "title": "🍪 Strona Testowa Zgody na Pliki Cookie",
+    "instructionsTitle": "ℹ️ Instrukcje:",
+    "instructions": [
+      "Jeśli to Twoja pierwsza wizyta, modal cookies powinien pojawić się automatycznie",
+      "Po zaakceptowaniu lub odrzuceniu, nie pojawi się ponownie (zapisywane w localStorage)",
+      "Aby przetestować ponownie, kliknij przycisk \"Resetuj Zgodę na Cookie\" poniżej"
+    ],
+    "analytics": {
+      "title": "📊 Analityka i Prywatność",
+      "intro": "Wulkan Kibo używa narzędzi analitycznych, aby ulepszać doświadczenie użytkownika i rozumieć, jak odwiedzający korzystają z naszych treści. Poważnie traktujemy Twoją prywatność i zbieramy dane analityczne tylko za Twoją zgodą.",
+      "gaTitle": "<span class=\"analytics-badge\">Google Analytics</span> Co śledzimy",
+      "gaIntro": "Po wyrażeniu zgody na analitykę używamy <strong>Google Analytics 4 (GA4)</strong> do zbierania zanonimizowanych danych o:",
+      "gaItems": [
+        "<strong>Wyświetleniach stron:</strong> Które przepisy i strony są najpopularniejsze",
+        "<strong>Zachowaniu użytkowników:</strong> Jak odwiedzający poruszają się po stronie (np. z strony głównej do stron przepisów)",
+        "<strong>Źródłach ruchu:</strong> Skąd pochodzą odwiedzający (wyszukiwarki, media społecznościowe, wejścia bezpośrednie)",
+        "<strong>Informacjach o urządzeniu:</strong> Typ przeglądarki, system operacyjny i rozmiar ekranu (do ulepszeń responsywności)",
+        "<strong>Danych geograficznych:</strong> Lokalizacja na poziomie kraju i miasta (nie dokładna lokalizacja)",
+        "<strong>Metrykach zaangażowania:</strong> Czas spędzony na stronach, głębokość przewijania, odtworzenia filmów"
+      ],
+      "vercelTitle": "<span class=\"analytics-badge\">Vercel Analytics</span> Monitorowanie wydajności",
+      "vercelIntro": "Używamy także <strong>Vercel Web Analytics</strong> do przyjaznych dla prywatności wglądów wydajności:",
+      "vercelItems": [
+        "<strong>Czasów ładowania stron:</strong> Jak szybko strony ładują się dla odwiedzających",
+        "<strong>Core Web Vitals:</strong> Metryki wydajności (LCP, FID, CLS) zapewniające szybkie, płynne działanie",
+        "<strong>Wzorców ruchu:</strong> Godziny największego ruchu i popularne treści",
+        "<strong>Bez danych osobowych:</strong> Vercel Analytics nie używa cookies i nie śledzi danych osobowych"
+      ],
+      "whyTitle": "🔒 Dlaczego to Ważne",
+      "whyIntro": "Analityka pomaga nam:",
+      "whyItems": [
+        "<strong>Tworzyć lepsze treści:</strong> Rozumieć, które przepisy są najbardziej lubiane, aby tworzyć podobne",
+        "<strong>Poprawiać wydajność strony:</strong> Identyfikować wolne strony i optymalizować czasy ładowania",
+        "<strong>Naprawiać problemy:</strong> Wykrywać niedziałające linki lub problemy nawigacyjne",
+        "<strong>Optymalizować dla urządzeń mobilnych:</strong> Zapewniać świetne doświadczenie na wszystkich urządzeniach",
+        "<strong>Planować przyszłe treści:</strong> Wiedzieć, które tematy kuchni afrykańskiej interesują Cię najbardziej"
+      ],
+      "privacyTitle": "🛡️ Twoje Prawa Prywatności",
+      "privacyIntro": "Masz pełną kontrolę:",
+      "privacyItems": [
+        "<strong>Rezygnacja w każdej chwili:</strong> Możesz odrzucić cookies lub cofnąć zgodę w dowolnym momencie",
+        "<strong>Brak identyfikacji osobistej:</strong> Nie zbieramy imion, e‑maili ani danych osobowych poprzez analitykę",
+        "<strong>Anonimizacja IP:</strong> Google Analytics jest skonfigurowany do anonimizacji adresów IP",
+        "<strong>Zgodność z RODO:</strong> Nasz system zgody przestrzega europejskich przepisów dotyczących prywatności",
+        "<strong>Retencja danych:</strong> Dane analityczne są automatycznie usuwane po 14 miesiącach"
+      ],
+      "note": "<strong>Uwaga:</strong> Odrzucenie cookies analitycznych nie wpływa na możliwość korzystania z serwisu. Wszystkie przepisy, filmy i treści pozostają w pełni dostępne."
+    }
+  }
 }

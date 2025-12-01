@@ -262,4 +262,55 @@
     "plantainTip4": "Suggestions de service : Le Kelewele est traditionnellement servi comme collation avec des arachides ou comme accompagnement de poisson ou poulet grillé. Également excellent pour le petit-déjeuner !",
     "plantainTip5": "Conservation : Meilleur frais, mais les restes peuvent être conservés au réfrigérateur pendant 2 jours et réchauffés au four à 175°C pendant 10 minutes pour restaurer le croustillant."
   }
+  ,
+  "cookie": {
+    "title": "🍪 Page de Test du Consentement aux Cookies",
+    "instructionsTitle": "ℹ️ Instructions :",
+    "instructions": [
+      "Si c'est votre première visite, la fenêtre modale des cookies devrait apparaître automatiquement",
+      "Une fois acceptés ou rejetés, elle ne réapparaîtra pas (stockée dans le localStorage)",
+      "Pour tester à nouveau, cliquez sur le bouton \"Réinitialiser le Consentement aux Cookies\" ci-dessous"
+    ],
+    "analytics": {
+      "title": "📊 Informations sur l'Analyse et la Confidentialité",
+      "intro": "Wulkan Kibo utilise des outils d'analyse pour améliorer l'expérience utilisateur et comprendre comment les visiteurs interagissent avec notre contenu. Nous prenons votre vie privée au sérieux et ne collectons des données analytiques qu'avec votre consentement.",
+      "gaTitle": "<span class=\"analytics-badge\">Google Analytics</span> Ce que nous suivons",
+      "gaIntro": "Lorsque vous consentez à l'analyse, nous utilisons <strong>Google Analytics 4 (GA4)</strong> pour collecter des données anonymisées sur :",
+      "gaItems": [
+        "<strong>Vues de page :</strong> Quels recettes et pages sont les plus populaires",
+        "<strong>Comportement des utilisateurs :</strong> Comment les visiteurs naviguent sur le site (par ex., de la page d'accueil aux pages de recettes)",
+        "<strong>Sources de trafic :</strong> D'où viennent les visiteurs (moteurs de recherche, réseaux sociaux, visites directes)",
+        "<strong>Informations sur l'appareil :</strong> Type de navigateur, système d'exploitation et taille d'écran (pour des améliorations responsives)",
+        "<strong>Données géographiques :</strong> Localisation au niveau du pays et de la ville (pas de localisation précise)",
+        "<strong>Métriques d'engagement :</strong> Temps passé sur les pages, profondeur de défilement, vues vidéo"
+      ],
+      "vercelTitle": "<span class=\"analytics-badge\">Vercel Analytics</span> Surveillance des performances",
+      "vercelIntro": "Nous utilisons également <strong>Vercel Web Analytics</strong> pour des informations sur les performances respectueuses de la vie privée :",
+      "vercelItems": [
+        "<strong>Temps de chargement des pages :</strong> À quelle vitesse les pages se chargent pour les visiteurs",
+        "<strong>Core Web Vitals :</strong> Métriques de performance (LCP, FID, CLS) pour garantir des expériences rapides et fluides",
+        "<strong>Schémas de trafic :</strong> Périodes de forte affluence et contenu populaire",
+        "<strong>Aucune donnée personnelle :</strong> Vercel Analytics n'utilise pas de cookies et ne suit pas d'informations personnelles"
+      ],
+      "whyTitle": "🔒 Pourquoi C'est Important",
+      "whyIntro": "L'analyse nous aide à :",
+      "whyItems": [
+        "<strong>Créer un meilleur contenu :</strong> Comprendre quelles recettes sont les plus appréciées afin d'en créer davantage",
+        "<strong>Améliorer les performances du site :</strong> Identifier les pages lentes et optimiser les temps de chargement",
+        "<strong>Corriger les problèmes :</strong> Détecter les liens cassés ou les problèmes de navigation",
+        "<strong>Optimiser pour mobile :</strong> Assurer une excellente expérience sur tous les appareils",
+        "<strong>Planifier le contenu futur :</strong> Savoir quels sujets de cuisine africaine vous intéressent le plus"
+      ],
+      "privacyTitle": "🛡️ Vos Droits à la Vie Privée",
+      "privacyIntro": "Vous avez un contrôle total :",
+      "privacyItems": [
+        "<strong>Désactiver à tout moment :</strong> Vous pouvez refuser les cookies ou révoquer votre consentement à tout moment",
+        "<strong>Pas d'identification personnelle :</strong> Nous ne collectons jamais de noms, d'e‑mails ou d'informations personnelles via l'analyse",
+        "<strong>Anonymisation IP :</strong> Google Analytics est configuré pour anonymiser les adresses IP",
+        "<strong>Conforme au RGPD :</strong> Notre système de consentement respecte les réglementations européennes en matière de confidentialité",
+        "<strong>Rétention des données :</strong> Les données analytiques sont automatiquement supprimées après 14 mois"
+      ],
+      "note": "<strong>Note :</strong> Le refus des cookies d'analyse n'affectera pas votre capacité à utiliser le site web. Toutes les recettes, vidéos et contenus restent entièrement accessibles."
+    }
+  }
 }

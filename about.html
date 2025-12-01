@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){ dataLayer.push(arguments); }
-
-            // Set default consent to denied
-            gtag('consent', 'default', {
-              'analytics_storage': 'denied',
-              'ad_storage': 'denied',
-              'ad_user_data': 'denied',
-              'ad_personalization': 'denied'
-            });
-        </script>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-20L5TV2NMP"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-20L5TV2NMP');
-        </script>
+                <script src="/assets/js/head-common.js"></script>
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-20L5TV2NMP"></script>
         <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Poznaj Wulkan Kibo - nasza misja dzielenia się autentyczną kuchnią afrykańską ze światem poprzez samouczki wideo i szczegółowe przepisy.">
@@ -30,12 +12,7 @@
     <meta name="googlebot" content="index, follow">
     <meta name="bingbot" content="index, follow">
     <meta name="keywords" content="Wulkan Kibo, African cuisine, about us, African cooking, culinary mission, food culture, traditional recipes, kuchnia afrykańska">
-    <script>
-      // Prevent flash of unstyled content by setting dark mode immediately
-      (function() {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      })();
-    </script>
+        <!-- Theme + analytics bootstrap moved to /assets/js/head-common.js -->
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wulkankibo.com/about.html">
@@ -204,11 +181,8 @@
     
     <title>O Nas - Wulkan Kibo Kuchnia Afrykańska</title>
     
-    <!-- Vercel Web Analytics -->
-    <script>
-      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+        <!-- Vercel Web Analytics (stub now in head-common.js) -->
+        <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
     <a href="#main-content" class="sr-only sr-only-focusable">Przejdź do głównej treści</a>
@@ -386,6 +360,7 @@
                         <li><a href="recipes/index.html" data-i18n="site.nav.recipes">Przepisy</a></li>
                         <li><a href="about.html" data-i18n="site.nav.about">O nas</a></li>
                         <li><a href="contact.html" data-i18n="site.nav.contact">Kontakt</a></li>
+                        <li><a href="TEST-COOKIE-CONSENT.html">Cookie Consent Test</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -399,8 +374,8 @@
         </div>
     </footer>
     
-    <script src="/assets/js/i18n.js"></script>
+    <script src="/assets/js/i18n.js" defer></script>
     <script type="module" src="/assets/js/main.js"></script>
-    <script src="assets/js/cookie-consent.js"></script>
+    <script src="/assets/js/cookie-consent.js" defer></script>
 </body>
 </html>

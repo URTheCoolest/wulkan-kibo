@@ -16,9 +16,10 @@
 
   async function loadTranslations(lang){
     // Determine correct path based on current location
+    // Use relative paths to work both on local file:// and hosted environments
     const basePath = window.location.pathname.includes('/recipes/')
       ? '../assets/i18n/'
-      : '/assets/i18n/';
+      : 'assets/i18n/';
     const res = await fetch(`${basePath}${lang}.json`);
     if (!res.ok) throw new Error('Failed to load translations: ' + lang);
     return res.json();
@@ -60,6 +61,10 @@
       updateLangSwitcher(current);
     } catch (e){
       console.error(e);
+      const statusEl = document.getElementById('consent-status');
+      if (statusEl){
+        statusEl.innerHTML = `⚠️ Translation files couldn't be loaded. If you're opening this HTML directly (file://), please use a local server so fetch() can load JSON: <code>python -m http.server</code> or <code>npx serve</code>.`;
+      }
     }
   }
 
