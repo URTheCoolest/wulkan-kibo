@@ -922,12 +922,14 @@ a:hover {
 
 /* Ingredients & Instructions */
 .recipe-ingredients,
+.recipe-equipment,
 .recipe-instructions,
 .recipe-tips {
   margin: var(--spacing-3xl) 0;
 }
 
 .recipe-ingredients h2,
+.recipe-equipment h2,
 .recipe-instructions h2,
 .recipe-tips h2 {
   font-size: 1.75rem;
@@ -936,12 +938,14 @@ a:hover {
 }
 
 .ingredients-list,
+.equipment-list,
 .instructions-list,
 .recipe-tips ul {
   padding-left: var(--spacing-xl);
 }
 
 .ingredients-list li,
+.equipment-list li,
 .recipe-tips ul li {
   margin-bottom: var(--spacing-md);
   line-height: 1.7;
