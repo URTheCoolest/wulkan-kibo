@@ -563,8 +563,6 @@ function generateSitemap() {
   const pages = [
     '/',
     '/recipes/',
-    '/recipes/african-jollof.html',
-    '/recipes/peanut-stew.html',
     '/recipes/plantain-fritters.html',
     '/about.html',
     '/contact.html'
